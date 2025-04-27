@@ -1,4 +1,4 @@
 tmp_benchmark.v
-**/*.v*
+**/*.vo*
 **/*.glob
 **/*.aux
