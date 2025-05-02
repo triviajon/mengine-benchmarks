@@ -85,6 +85,36 @@
             "prompt_skip": "Skip n"
           }
         ]
-      }
+      },
+      {
+        "name": "Coq: HAA",
+        "template": "haa/haa_rewrite.v",
+        "summary": "coq_haa_summary.txt",
+        "codeGenerator": "haa_gen",
+        "parameters": [
+          {
+            "name": "haa",
+            "placeholder": "__HAA__",
+            "prompt_min": "Minimum n",
+            "prompt_max": "Maximum n",
+            "prompt_skip": "Skip n"
+          }
+        ]
+      },
+      {
+        "name": "Lean: HAA (repeat_rw)",
+        "template": "haa/simp_only.lean",
+        "summary": "lean_haa_simp_only_summary.txt",
+        "codeGenerator": "lean_haa_gen",
+        "parameters": [
+          {
+            "name": "haa",
+            "placeholder": "__HAA__",
+            "prompt_min": "Minimum n",
+            "prompt_max": "Maximum n",
+            "prompt_skip": "Skip n"
+          }
+        ]
+      }      
     ]
   }

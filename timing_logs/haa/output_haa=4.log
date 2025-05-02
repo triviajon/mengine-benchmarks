@@ -1,0 +1,680 @@
+[Elab.command] [0.008727] example :
+        (let HAA0 := h a a;
+          let HAA1 := h HAA0 HAA0;
+          let HAA2 := h HAA1 HAA1;
+          let HAA3 := h HAA2 HAA2;
+          let HAA4 := h HAA3 HAA3;
+          HAA4) =
+          (c) :=
+      by simp only [eq_haa_a]
+  [Elab.step] [0.000011] expected type: Sort ?u.72, term
+      Type
+  [Elab.step] [0.000163] expected type: Sort ?u.74, term
+      α → α
+    [Elab.step] [0.000087] expected type: Type, term
+        α
+      [Meta.isDefEq] [0.000028] ✅️ Sort ?u.75 =?= Type
+        [Meta.isLevelDefEq] [0.000005] ✅️ ?u.75 =?= 1
+    [Elab.step] [0.000047] expected type: Type, term
+        α
+      [Meta.isDefEq] [0.000011] ✅️ Sort ?u.76 =?= Type
+        [Meta.isLevelDefEq] [0.000003] ✅️ ?u.76 =?= 1
+  [Elab.step] [0.000108] expected type: Sort ?u.78, term
+      α → α
+    [Elab.step] [0.000042] expected type: Type, term
+        α
+      [Meta.isDefEq] [0.000011] ✅️ Sort ?u.79 =?= Type
+        [Meta.isLevelDefEq] [0.000003] ✅️ ?u.79 =?= 1
+    [Elab.step] [0.000040] expected type: Type, term
+        α
+      [Meta.isDefEq] [0.000010] ✅️ Sort ?u.80 =?= Type
+        [Meta.isLevelDefEq] [0.000003] ✅️ ?u.80 =?= 1
+  [Elab.step] [0.000172] expected type: Sort ?u.82, term
+      α → α → α
+    [Elab.step] [0.000039] expected type: Type, term
+        α
+      [Meta.isDefEq] [0.000010] ✅️ Sort ?u.83 =?= Type
+        [Meta.isLevelDefEq] [0.000002] ✅️ ?u.83 =?= 1
+    [Elab.step] [0.000109] expected type: Sort ?u.84, term
+        α → α
+      [Elab.step] [0.000041] expected type: Type, term
+          α
+        [Meta.isDefEq] [0.000010] ✅️ Sort ?u.85 =?= Type
+          [Meta.isLevelDefEq] [0.000002] ✅️ ?u.85 =?= 1
+      [Elab.step] [0.000038] expected type: Type, term
+          α
+        [Meta.isDefEq] [0.000009] ✅️ Sort ?u.86 =?= Type
+          [Meta.isLevelDefEq] [0.000002] ✅️ ?u.86 =?= 1
+  [Elab.step] [0.000039] expected type: Type, term
+      α
+    [Meta.isDefEq] [0.000010] ✅️ Sort ?u.88 =?= Type
+      [Meta.isLevelDefEq] [0.000003] ✅️ ?u.88 =?= 1
+  [Elab.step] [0.000039] expected type: Type, term
+      α
+    [Meta.isDefEq] [0.000010] ✅️ Sort ?u.90 =?= Type
+      [Meta.isLevelDefEq] [0.000002] ✅️ ?u.90 =?= 1
+  [Elab.step] [0.000039] expected type: Type, term
+      α
+    [Meta.isDefEq] [0.000010] ✅️ Sort ?u.92 =?= Type
+      [Meta.isLevelDefEq] [0.000003] ✅️ ?u.92 =?= 1
+  [Elab.step] [0.000572] expected type: Sort ?u.94, term
+      ∀ x y : α, (h x y) = c
+    [Elab.step] [0.000553] expected type: Sort ?u.94, term
+        forall (x : α) (y : α), (h x y) = c
+      [Elab.step] [0.000044] expected type: Type, term
+          α
+        [Meta.isDefEq] [0.000015] ✅️ Sort ?u.95 =?= Type
+          [Meta.isLevelDefEq] [0.000006] ✅️ ?u.95 =?= 1
+      [Elab.step] [0.000045] expected type: Type, term
+          α
+        [Meta.isDefEq] [0.000011] ✅️ Sort ?u.97 =?= Type
+          [Meta.isLevelDefEq] [0.000003] ✅️ ?u.97 =?= 1
+      [Elab.step] [0.000398] expected type: Sort ?u.99, term
+          (h x y) = c
+        [Elab.step] [0.000379] expected type: Sort ?u.99, term
+            binrel% Eq✝ (h x y) c
+          [Elab.step] [0.000140] expected type: <not-available>, term
+              h x y
+            [Elab.step] [0.000035] expected type: α, term
+                x
+              [Meta.isDefEq] [0.000001] ✅️ α =?= α
+            [Meta.isDefEq] [0.000001] ✅️ α =?= α
+            [Elab.step] [0.000030] expected type: α, term
+                y
+              [Meta.isDefEq] [0.000001] ✅️ α =?= α
+            [Meta.isDefEq] [0.000001] ✅️ α =?= α
+          [Elab.step] [0.000019] expected type: <not-available>, term
+              c
+          [Meta.isDefEq] [0.000001] ✅️ α =?= α
+          [Meta.isDefEq] [0.000000] ✅️ α =?= α
+          [Meta.isDefEq] [0.000000] ✅️ α =?= α
+          [Meta.isDefEq] [0.000046] ✅️ α =?= ?m.101
+            [Meta.isDefEq.assign] [0.000036] ✅️ ?m.101 := α
+              [Meta.isDefEq.assign.checkTypes] [0.000023] ✅️ (?m.101 : Sort ?u.100) := (α : Type)
+                [Meta.isDefEq] [0.000011] ✅️ Sort ?u.100 =?= Type
+                  [Meta.isLevelDefEq] [0.000003] ✅️ ?u.100 =?= 1
+          [Meta.isDefEq] [0.000003] ✅️ α =?= α
+  [Elab.definition.header] [0.001994] _example
+    [Elab.step] [0.001841] expected type: Sort ?u.103, term
+        (let HAA0 := h a a;
+          let HAA1 := h HAA0 HAA0;
+          let HAA2 := h HAA1 HAA1;
+          let HAA3 := h HAA2 HAA2;
+          let HAA4 := h HAA3 HAA3;
+          HAA4) =
+          (c)
+      [Elab.step] [0.001822] expected type: Sort ?u.103, term
+          binrel% Eq✝
+            (let HAA0 := h a a;
+            let HAA1 := h HAA0 HAA0;
+            let HAA2 := h HAA1 HAA1;
+            let HAA3 := h HAA2 HAA2;
+            let HAA4 := h HAA3 HAA3;
+            HAA4)
+            (c)
+        [Elab.step] [0.001569] expected type: <not-available>, term
+            let HAA0 := h a a;
+            let HAA1 := h HAA0 HAA0;
+            let HAA2 := h HAA1 HAA1;
+            let HAA3 := h HAA2 HAA2;
+            let HAA4 := h HAA3 HAA3;
+            HAA4
+          [Elab.step] [0.000021] expected type: Sort ?u.105, term
+              _
+          [Elab.step] [0.000257] expected type: α, term
+              h a a
+            [Meta.isDefEq] [0.000051] ✅️ ?m.106 =?= α
+              [Meta.isDefEq.assign] [0.000041] ✅️ ?m.106 := α
+                [Meta.isDefEq.assign.checkTypes] [0.000022] ✅️ (?m.106 : Sort ?u.105) := (α : Type)
+                  [Meta.isDefEq] [0.000014] ✅️ Sort ?u.105 =?= Type
+                    [Meta.isLevelDefEq] [0.000004] ✅️ ?u.105 =?= 1
+            [Elab.step] [0.000051] expected type: α, term
+                a
+              [Meta.isDefEq] [0.000001] ✅️ α =?= α
+            [Meta.isDefEq] [0.000001] ✅️ α =?= α
+            [Elab.step] [0.000036] expected type: α, term
+                a
+              [Meta.isDefEq] [0.000001] ✅️ α =?= α
+            [Meta.isDefEq] [0.000001] ✅️ α =?= α
+            [Meta.isDefEq] [0.000004] ✅️ α =?= α
+          [Meta.isDefEq] [0.000003] ✅️ α =?= α
+          [Elab.step] [0.001146] expected type: <not-available>, term
+              let HAA1 := h HAA0 HAA0;
+              let HAA2 := h HAA1 HAA1;
+              let HAA3 := h HAA2 HAA2;
+              let HAA4 := h HAA3 HAA3;
+              HAA4
+            [Elab.step] [0.000006] expected type: Sort ?u.108, term
+                _
+            [Elab.step] [0.000217] expected type: α, term
+                h HAA0 HAA0
+              [Meta.isDefEq] [0.000048] ✅️ ?m.109 =?= α
+                [Meta.isDefEq.assign] [0.000033] ✅️ ?m.109 := α
+                  [Meta.isDefEq.assign.checkTypes] [0.000020] ✅️ (?m.109 : Sort ?u.108) := (α : Type)
+                    [Meta.isDefEq] [0.000012] ✅️ Sort ?u.108 =?= Type
+                      [Meta.isLevelDefEq] [0.000004] ✅️ ?u.108 =?= 1
+              [Elab.step] [0.000046] expected type: α, term
+                  HAA0
+                [Meta.isDefEq] [0.000003] ✅️ α =?= α
+              [Meta.isDefEq] [0.000006] ✅️ α =?= α
+              [Elab.step] [0.000033] expected type: α, term
+                  HAA0
+                [Meta.isDefEq] [0.000002] ✅️ α =?= α
+              [Meta.isDefEq] [0.000002] ✅️ α =?= α
+              [Meta.isDefEq] [0.000002] ✅️ α =?= α
+            [Meta.isDefEq] [0.000002] ✅️ α =?= α
+            [Elab.step] [0.000859] expected type: <not-available>, term
+                let HAA2 := h HAA1 HAA1;
+                let HAA3 := h HAA2 HAA2;
+                let HAA4 := h HAA3 HAA3;
+                HAA4
+              [Elab.step] [0.000010] expected type: Sort ?u.111, term
+                  _
+              [Elab.step] [0.000204] expected type: α, term
+                  h HAA1 HAA1
+                [Meta.isDefEq] [0.000041] ✅️ ?m.112 =?= α
+                  [Meta.isDefEq.assign] [0.000029] ✅️ ?m.112 := α
+                    [Meta.isDefEq.assign.checkTypes] [0.000019] ✅️ (?m.112 : Sort ?u.111) := (α : Type)
+                      [Meta.isDefEq] [0.000012] ✅️ Sort ?u.111 =?= Type
+                        [Meta.isLevelDefEq] [0.000003] ✅️ ?u.111 =?= 1
+                [Elab.step] [0.000041] expected type: α, term
+                    HAA1
+                  [Meta.isDefEq] [0.000002] ✅️ α =?= α
+                [Meta.isDefEq] [0.000002] ✅️ α =?= α
+                [Elab.step] [0.000031] expected type: α, term
+                    HAA1
+                  [Meta.isDefEq] [0.000002] ✅️ α =?= α
+                [Meta.isDefEq] [0.000002] ✅️ α =?= α
+                [Meta.isDefEq] [0.000002] ✅️ α =?= α
+              [Meta.isDefEq] [0.000002] ✅️ α =?= α
+              [Elab.step] [0.000584] expected type: <not-available>, term
+                  let HAA3 := h HAA2 HAA2;
+                  let HAA4 := h HAA3 HAA3;
+                  HAA4
+                [Elab.step] [0.000006] expected type: Sort ?u.114, term
+                    _
+                [Elab.step] [0.000206] expected type: α, term
+                    h HAA2 HAA2
+                  [Meta.isDefEq] [0.000043] ✅️ ?m.115 =?= α
+                    [Meta.isDefEq.assign] [0.000032] ✅️ ?m.115 := α
+                      [Meta.isDefEq.assign.checkTypes] [0.000021] ✅️ (?m.115 : Sort ?u.114) := (α : Type)
+                        [Meta.isDefEq] [0.000011] ✅️ Sort ?u.114 =?= Type
+                          [Meta.isLevelDefEq] [0.000003] ✅️ ?u.114 =?= 1
+                  [Elab.step] [0.000041] expected type: α, term
+                      HAA2
+                    [Meta.isDefEq] [0.000002] ✅️ α =?= α
+                  [Meta.isDefEq] [0.000002] ✅️ α =?= α
+                  [Elab.step] [0.000032] expected type: α, term
+                      HAA2
+                    [Meta.isDefEq] [0.000002] ✅️ α =?= α
+                  [Meta.isDefEq] [0.000002] ✅️ α =?= α
+                  [Meta.isDefEq] [0.000002] ✅️ α =?= α
+                [Meta.isDefEq] [0.000002] ✅️ α =?= α
+                [Elab.step] [0.000311] expected type: <not-available>, term
+                    let HAA4 := h HAA3 HAA3;
+                    HAA4
+                  [Elab.step] [0.000011] expected type: Sort ?u.117, term
+                      _
+                  [Elab.step] [0.000202] expected type: α, term
+                      h HAA3 HAA3
+                    [Meta.isDefEq] [0.000042] ✅️ ?m.118 =?= α
+                      [Meta.isDefEq.assign] [0.000033] ✅️ ?m.118 := α
+                        [Meta.isDefEq.assign.checkTypes] [0.000023] ✅️ (?m.118 : Sort ?u.117) := (α : Type)
+                          [Meta.isDefEq] [0.000016] ✅️ Sort ?u.117 =?= Type
+                            [Meta.isLevelDefEq] [0.000004] ✅️ ?u.117 =?= 1
+                    [Elab.step] [0.000036] expected type: α, term
+                        HAA3
+                      [Meta.isDefEq] [0.000002] ✅️ α =?= α
+                    [Meta.isDefEq] [0.000002] ✅️ α =?= α
+                    [Elab.step] [0.000031] expected type: α, term
+                        HAA3
+                      [Meta.isDefEq] [0.000002] ✅️ α =?= α
+                    [Meta.isDefEq] [0.000002] ✅️ α =?= α
+                    [Meta.isDefEq] [0.000002] ✅️ α =?= α
+                  [Meta.isDefEq] [0.000002] ✅️ α =?= α
+                  [Elab.step] [0.000021] expected type: <not-available>, term
+                      HAA4
+        [Elab.step] [0.000020] expected type: <not-available>, term
+            c
+        [Meta.isDefEq] [0.000001] ✅️ α =?= α
+        [Meta.isDefEq] [0.000000] ✅️ α =?= α
+        [Meta.isDefEq] [0.000000] ✅️ α =?= α
+        [Meta.isDefEq] [0.000041] ✅️ α =?= ?m.125
+          [Meta.isDefEq.assign] [0.000033] ✅️ ?m.125 := α
+            [Meta.isDefEq.assign.checkTypes] [0.000019] ✅️ (?m.125 : Sort ?u.104) := (α : Type)
+              [Meta.isDefEq] [0.000012] ✅️ Sort ?u.104 =?= Type
+                [Meta.isLevelDefEq] [0.000003] ✅️ ?u.104 =?= 1
+        [Meta.isDefEq] [0.000003] ✅️ α =?= α
+    [Meta.instantiateMVars] [0.000005] (let HAA0 := h a a;
+          let HAA1 := h HAA0 HAA0;
+          let HAA2 := h HAA1 HAA1;
+          let HAA3 := h HAA2 HAA2;
+          let HAA4 := h HAA3 HAA3;
+          HAA4) =
+          c
+  [Meta.instantiateMVars] [0.000000] (let HAA0 := h a a;
+        let HAA1 := h HAA0 HAA0;
+        let HAA2 := h HAA1 HAA1;
+        let HAA3 := h HAA2 HAA2;
+        let HAA4 := h HAA3 HAA3;
+        HAA4) =
+        c
+  [Elab.definition.value] [0.004012] _example
+    [Elab.step] [0.000016] expected type: (let HAA0 := h a a;
+          let HAA1 := h HAA0 HAA0;
+          let HAA2 := h HAA1 HAA1;
+          let HAA3 := h HAA2 HAA2;
+          let HAA4 := h HAA3 HAA3;
+          HAA4) =
+          c, term
+        by simp only [eq_haa_a]
+    [Meta.isDefEq] [0.000001] ✅️ (let HAA0 := h a a;
+          let HAA1 := h HAA0 HAA0;
+          let HAA2 := h HAA1 HAA1;
+          let HAA3 := h HAA2 HAA2;
+          let HAA4 := h HAA3 HAA3;
+          HAA4) =
+          c =?= (let HAA0 := h a a;
+          let HAA1 := h HAA0 HAA0;
+          let HAA2 := h HAA1 HAA1;
+          let HAA3 := h HAA2 HAA2;
+          let HAA4 := h HAA3 HAA3;
+          HAA4) =
+          c
+    [Elab.step] [0.003627] simp only [eq_haa_a]
+      [Elab.step] [0.003575] simp only [eq_haa_a]
+        [Elab.step] [0.003540] simp only [eq_haa_a]
+          [Meta.whnf] [0.000044] Non-easy whnf: (a = a) = True
+          [Meta.whnf] [0.000002] Non-easy whnf: (?a = ?a) = True
+          [Meta.whnf] [0.000002] Non-easy whnf: (?a = ?a) = True
+          [Meta.whnf] [0.000003] Non-easy whnf: (p ↔ p) = True
+          [Meta.whnf] [0.000002] Non-easy whnf: (?p ↔ ?p) = True
+          [Meta.whnf] [0.000001] Non-easy whnf: (?p ↔ ?p) = True
+          [Meta.whnf] [0.000017] Non-easy whnf: h x y = c
+          [Meta.whnf] [0.000002] Non-easy whnf: h x y = c
+          [Meta.whnf] [0.000003] Non-easy whnf: h ?x ?y = c
+          [Meta.whnf] [0.000002] Non-easy whnf: h ?x ?y = c
+          [Meta.whnf] [0.000005] Non-easy whnf: h ?x ?y = c
+          [Meta.whnf] [0.000002] Non-easy whnf: h ?x ?y = c
+          [Meta.isDefEq] [0.000219] ✅️ h ?x ?y =?= h a a
+            [Meta.isDefEq] [0.000001] ✅️ h =?= h
+            [Meta.isDefEq] [0.000033] ✅️ ?x =?= a
+              [Meta.isDefEq.assign] [0.000022] ✅️ ?x := a
+                [Meta.isDefEq.assign.checkTypes] [0.000010] ✅️ (?x : α) := (a : α)
+                  [Meta.isDefEq] [0.000000] ✅️ α =?= α
+            [Meta.isDefEq] [0.000026] ✅️ ?y =?= a
+              [Meta.isDefEq.assign] [0.000019] ✅️ ?y := a
+                [Meta.isDefEq.assign.checkTypes] [0.000008] ✅️ (?y : α) := (a : α)
+                  [Meta.isDefEq] [0.000000] ✅️ α =?= α
+          [Meta.whnf] [0.000005] Non-easy whnf: h a a = c
+          [Meta.whnf] [0.000004] Non-easy whnf: h (h a a) = h c
+          [Meta.whnf] [0.000002] Non-easy whnf: h a a = c
+          [Meta.whnf] [0.000003] Non-easy whnf: h ?x ?y = c
+          [Meta.whnf] [0.000002] Non-easy whnf: h ?x ?y = c
+          [Meta.isDefEq] [0.000093] ✅️ h ?x ?y =?= h c c
+            [Meta.isDefEq] [0.000001] ✅️ h =?= h
+            [Meta.isDefEq] [0.000032] ✅️ ?x =?= c
+              [Meta.isDefEq.assign] [0.000024] ✅️ ?x := c
+                [Meta.isDefEq.assign.checkTypes] [0.000013] ✅️ (?x : α) := (c : α)
+                  [Meta.isDefEq] [0.000000] ✅️ α =?= α
+            [Meta.isDefEq] [0.000021] ✅️ ?y =?= c
+              [Meta.isDefEq.assign] [0.000015] ✅️ ?y := c
+                [Meta.isDefEq.assign.checkTypes] [0.000007] ✅️ (?y : α) := (c : α)
+                  [Meta.isDefEq] [0.000000] ✅️ α =?= α
+          [Meta.whnf] [0.000005] Non-easy whnf: h (h a a) (h a a) = h c c
+          [Meta.whnf] [0.000002] Non-easy whnf: h c c = c
+          [Meta.whnf] [0.000004] Non-easy whnf: h (h a a) (h a a) = c
+          [Meta.whnf] [0.000003] Non-easy whnf: h (h (h a a) (h a a)) = h c
+          [Meta.whnf] [0.000002] Non-easy whnf: h (h a a) (h a a) = c
+          [Meta.whnf] [0.000007] Non-easy whnf: h ?x ?y = c
+          [Meta.whnf] [0.000002] Non-easy whnf: h ?x ?y = c
+          [Meta.isDefEq] [0.000087] ✅️ h ?x ?y =?= h c c
+            [Meta.isDefEq] [0.000001] ✅️ h =?= h
+            [Meta.isDefEq] [0.000027] ✅️ ?x =?= c
+              [Meta.isDefEq.assign] [0.000019] ✅️ ?x := c
+                [Meta.isDefEq.assign.checkTypes] [0.000009] ✅️ (?x : α) := (c : α)
+                  [Meta.isDefEq] [0.000000] ✅️ α =?= α
+            [Meta.isDefEq] [0.000021] ✅️ ?y =?= c
+              [Meta.isDefEq.assign] [0.000015] ✅️ ?y := c
+                [Meta.isDefEq.assign.checkTypes] [0.000007] ✅️ (?y : α) := (c : α)
+                  [Meta.isDefEq] [0.000000] ✅️ α =?= α
+          [Meta.whnf] [0.000004] Non-easy whnf: h (h (h a a) (h a a)) (h (h a a) (h a a)) = h c c
+          [Meta.whnf] [0.000002] Non-easy whnf: h c c = c
+          [Meta.whnf] [0.000003] Non-easy whnf: h (h (h a a) (h a a)) (h (h a a) (h a a)) = c
+          [Meta.whnf] [0.000003] Non-easy whnf: h (h (h (h a a) (h a a)) (h (h a a) (h a a))) = h c
+          [Meta.whnf] [0.000002] Non-easy whnf: h (h (h a a) (h a a)) (h (h a a) (h a a)) = c
+          [Meta.whnf] [0.000003] Non-easy whnf: h ?x ?y = c
+          [Meta.whnf] [0.000002] Non-easy whnf: h ?x ?y = c
+          [Meta.isDefEq] [0.000098] ✅️ h ?x ?y =?= h c c
+            [Meta.isDefEq] [0.000001] ✅️ h =?= h
+            [Meta.isDefEq] [0.000026] ✅️ ?x =?= c
+              [Meta.isDefEq.assign] [0.000019] ✅️ ?x := c
+                [Meta.isDefEq.assign.checkTypes] [0.000008] ✅️ (?x : α) := (c : α)
+                  [Meta.isDefEq] [0.000000] ✅️ α =?= α
+            [Meta.isDefEq] [0.000025] ✅️ ?y =?= c
+              [Meta.isDefEq.assign] [0.000019] ✅️ ?y := c
+                [Meta.isDefEq.assign.checkTypes] [0.000007] ✅️ (?y : α) := (c : α)
+                  [Meta.isDefEq] [0.000000] ✅️ α =?= α
+          [Meta.whnf] [0.000004] Non-easy whnf: h (h (h (h a a) (h a a)) (h (h a a) (h a a)))
+                  (h (h (h a a) (h a a)) (h (h a a) (h a a))) =
+                h c c
+          [Meta.whnf] [0.000002] Non-easy whnf: h c c = c
+          [Meta.whnf] [0.000003] Non-easy whnf: h (h (h (h a a) (h a a)) (h (h a a) (h a a)))
+                  (h (h (h a a) (h a a)) (h (h a a) (h a a))) =
+                c
+          [Meta.whnf] [0.000003] Non-easy whnf: h
+                  (h (h (h (h a a) (h a a)) (h (h a a) (h a a))) (h (h (h a a) (h a a)) (h (h a a) (h a a)))) =
+                h c
+          [Meta.whnf] [0.000002] Non-easy whnf: h (h (h (h a a) (h a a)) (h (h a a) (h a a)))
+                  (h (h (h a a) (h a a)) (h (h a a) (h a a))) =
+                c
+          [Meta.whnf] [0.000003] Non-easy whnf: h ?x ?y = c
+          [Meta.whnf] [0.000002] Non-easy whnf: h ?x ?y = c
+          [Meta.isDefEq] [0.000097] ✅️ h ?x ?y =?= h c c
+            [Meta.isDefEq] [0.000001] ✅️ h =?= h
+            [Meta.isDefEq] [0.000029] ✅️ ?x =?= c
+              [Meta.isDefEq.assign] [0.000019] ✅️ ?x := c
+                [Meta.isDefEq.assign.checkTypes] [0.000008] ✅️ (?x : α) := (c : α)
+                  [Meta.isDefEq] [0.000000] ✅️ α =?= α
+            [Meta.isDefEq] [0.000025] ✅️ ?y =?= c
+              [Meta.isDefEq.assign] [0.000019] ✅️ ?y := c
+                [Meta.isDefEq.assign.checkTypes] [0.000011] ✅️ (?y : α) := (c : α)
+                  [Meta.isDefEq] [0.000000] ✅️ α =?= α
+          [Meta.whnf] [0.000004] Non-easy whnf: h
+                  (h (h (h (h a a) (h a a)) (h (h a a) (h a a))) (h (h (h a a) (h a a)) (h (h a a) (h a a))))
+                  (h (h (h (h a a) (h a a)) (h (h a a) (h a a))) (h (h (h a a) (h a a)) (h (h a a) (h a a)))) =
+                h c c
+          [Meta.whnf] [0.000002] Non-easy whnf: h c c = c
+          [Meta.whnf] [0.000003] Non-easy whnf: h
+                  (h (h (h (h a a) (h a a)) (h (h a a) (h a a))) (h (h (h a a) (h a a)) (h (h a a) (h a a))))
+                  (h (h (h (h a a) (h a a)) (h (h a a) (h a a))) (h (h (h a a) (h a a)) (h (h a a) (h a a)))) =
+                c
+          [Meta.whnf] [0.000003] Non-easy whnf: h
+                  (h (h (h (h a a) (h a a)) (h (h a a) (h a a))) (h (h (h a a) (h a a)) (h (h a a) (h a a))))
+                  (h (h (h (h a a) (h a a)) (h (h a a) (h a a))) (h (h (h a a) (h a a)) (h (h a a) (h a a)))) =
+                c
+          [Meta.whnf] [0.000007] Non-easy whnf: (?a = ?a) = True
+          [Meta.whnf] [0.000003] Non-easy whnf: (?a = ?a) = True
+          [Meta.isDefEq] [0.000181] ✅️ ?a = ?a =?= c = c
+            [Meta.isDefEq] [0.000049] ✅️ ?α =?= α
+              [Meta.isDefEq.assign] [0.000038] ✅️ ?α := α
+                [Meta.isDefEq.assign.checkTypes] [0.000026] ✅️ (?α : Sort ?u.174) := (α : Type)
+                  [Meta.isDefEq] [0.000017] ✅️ Sort ?u.174 =?= Type
+                    [Meta.isLevelDefEq] [0.000003] ✅️ ?u.174 =?= 1
+            [Meta.isDefEq] [0.000027] ✅️ ?a =?= c
+              [Meta.isDefEq.assign] [0.000020] ✅️ ?a := c
+                [Meta.isDefEq.assign.checkTypes] [0.000011] ✅️ (?a : α) := (c : α)
+                  [Meta.isDefEq] [0.000003] ✅️ α =?= α
+            [Meta.isDefEq] [0.000002] ✅️ c =?= c
+            [Meta.isLevelDefEq] [0.000010] ✅️ ?u.174 =?= 1
+              [Meta.isLevelDefEq] [0.000000] ✅️ 0 =?= 0
+          [Meta.whnf] [0.000005] Non-easy whnf: (h
+                    (h (h (h (h a a) (h a a)) (h (h a a) (h a a))) (h (h (h a a) (h a a)) (h (h a a) (h a a))))
+                    (h (h (h (h a a) (h a a)) (h (h a a) (h a a))) (h (h (h a a) (h a a)) (h (h a a) (h a a)))) =
+                  c) =
+                (c = c)
+          [Meta.whnf] [0.000003] Non-easy whnf: (c = c) = True
+          [Meta.appBuilder] [0.000190] ✅️ f: of_eq_true, xs: [Eq.trans
+                 (congrArg (fun x => x = c)
+                   (Eq.trans
+                     (congr
+                       (congrArg h
+                         (Eq.trans
+                           (congr
+                             (congrArg h
+                               (Eq.trans
+                                 (congr
+                                   (congrArg h
+                                     (Eq.trans
+                                       (congr (congrArg h ((fun x y => eq_haa_a x y) a a))
+                                         ((fun x y => eq_haa_a x y) a a))
+                                       ((fun x y => eq_haa_a x y) c c)))
+                                   (Eq.trans
+                                     (congr (congrArg h ((fun x y => eq_haa_a x y) a a))
+                                       ((fun x y => eq_haa_a x y) a a))
+                                     ((fun x y => eq_haa_a x y) c c)))
+                                 ((fun x y => eq_haa_a x y) c c)))
+                             (Eq.trans
+                               (congr
+                                 (congrArg h
+                                   (Eq.trans
+                                     (congr (congrArg h ((fun x y => eq_haa_a x y) a a))
+                                       ((fun x y => eq_haa_a x y) a a))
+                                     ((fun x y => eq_haa_a x y) c c)))
+                                 (Eq.trans
+                                   (congr (congrArg h ((fun x y => eq_haa_a x y) a a)) ((fun x y => eq_haa_a x y) a a))
+                                   ((fun x y => eq_haa_a x y) c c)))
+                               ((fun x y => eq_haa_a x y) c c)))
+                           ((fun x y => eq_haa_a x y) c c)))
+                       (Eq.trans
+                         (congr
+                           (congrArg h
+                             (Eq.trans
+                               (congr
+                                 (congrArg h
+                                   (Eq.trans
+                                     (congr (congrArg h ((fun x y => eq_haa_a x y) a a))
+                                       ((fun x y => eq_haa_a x y) a a))
+                                     ((fun x y => eq_haa_a x y) c c)))
+                                 (Eq.trans
+                                   (congr (congrArg h ((fun x y => eq_haa_a x y) a a)) ((fun x y => eq_haa_a x y) a a))
+                                   ((fun x y => eq_haa_a x y) c c)))
+                               ((fun x y => eq_haa_a x y) c c)))
+                           (Eq.trans
+                             (congr
+                               (congrArg h
+                                 (Eq.trans
+                                   (congr (congrArg h ((fun x y => eq_haa_a x y) a a)) ((fun x y => eq_haa_a x y) a a))
+                                   ((fun x y => eq_haa_a x y) c c)))
+                               (Eq.trans
+                                 (congr (congrArg h ((fun x y => eq_haa_a x y) a a)) ((fun x y => eq_haa_a x y) a a))
+                                 ((fun x y => eq_haa_a x y) c c)))
+                             ((fun x y => eq_haa_a x y) c c)))
+                         ((fun x y => eq_haa_a x y) c c)))
+                     ((fun x y => eq_haa_a x y) c c)))
+                 (eq_self c)]
+            [Meta.isDefEq] [0.000147] ✅️ ?p =
+                  True =?= (h
+                      (h (h (h (h a a) (h a a)) (h (h a a) (h a a))) (h (h (h a a) (h a a)) (h (h a a) (h a a))))
+                      (h (h (h (h a a) (h a a)) (h (h a a) (h a a))) (h (h (h a a) (h a a)) (h (h a a) (h a a)))) =
+                    c) =
+                  True
+              [Meta.isDefEq] [0.000053] ✅️ ?p =?= h
+                      (h (h (h (h a a) (h a a)) (h (h a a) (h a a))) (h (h (h a a) (h a a)) (h (h a a) (h a a))))
+                      (h (h (h (h a a) (h a a)) (h (h a a) (h a a))) (h (h (h a a) (h a a)) (h (h a a) (h a a)))) =
+                    c
+                [Meta.isDefEq.assign] [0.000040] ✅️ ?p := h
+                        (h (h (h (h a a) (h a a)) (h (h a a) (h a a))) (h (h (h a a) (h a a)) (h (h a a) (h a a))))
+                        (h (h (h (h a a) (h a a)) (h (h a a) (h a a))) (h (h (h a a) (h a a)) (h (h a a) (h a a)))) =
+                      c
+                  [Meta.isDefEq.assign.checkTypes] [0.000021] ✅️ (?p : Prop) := (h
+                          (h (h (h (h a a) (h a a)) (h (h a a) (h a a))) (h (h (h a a) (h a a)) (h (h a a) (h a a))))
+                          (h (h (h (h a a) (h a a)) (h (h a a) (h a a))) (h (h (h a a) (h a a)) (h (h a a) (h a a)))) =
+                        c : Prop)
+                    [Meta.isDefEq] [0.000009] ✅️ Prop =?= Prop
+                      [Meta.isLevelDefEq] [0.000000] ✅️ 0 =?= 0
+              [Meta.isDefEq] [0.000001] ✅️ True =?= True
+              [Meta.isDefEq] [0.000008] ✅️ Prop =?= Prop
+                [Meta.isLevelDefEq] [0.000000] ✅️ 0 =?= 0
+              [Meta.isLevelDefEq] [0.000000] ✅️ 0 =?= 0
+    [Meta.instantiateMVars] [0.000002] of_eq_true
+          (Eq.trans
+            (congrArg (fun x => x = c)
+              (Eq.trans
+                (congr
+                  (congrArg h
+                    (Eq.trans
+                      (congr
+                        (congrArg h
+                          (Eq.trans
+                            (congr
+                              (congrArg h
+                                (Eq.trans
+                                  (congr (congrArg h ((fun x y => eq_haa_a x y) a a)) ((fun x y => eq_haa_a x y) a a))
+                                  ((fun x y => eq_haa_a x y) c c)))
+                              (Eq.trans
+                                (congr (congrArg h ((fun x y => eq_haa_a x y) a a)) ((fun x y => eq_haa_a x y) a a))
+                                ((fun x y => eq_haa_a x y) c c)))
+                            ((fun x y => eq_haa_a x y) c c)))
+                        (Eq.trans
+                          (congr
+                            (congrArg h
+                              (Eq.trans
+                                (congr (congrArg h ((fun x y => eq_haa_a x y) a a)) ((fun x y => eq_haa_a x y) a a))
+                                ((fun x y => eq_haa_a x y) c c)))
+                            (Eq.trans
+                              (congr (congrArg h ((fun x y => eq_haa_a x y) a a)) ((fun x y => eq_haa_a x y) a a))
+                              ((fun x y => eq_haa_a x y) c c)))
+                          ((fun x y => eq_haa_a x y) c c)))
+                      ((fun x y => eq_haa_a x y) c c)))
+                  (Eq.trans
+                    (congr
+                      (congrArg h
+                        (Eq.trans
+                          (congr
+                            (congrArg h
+                              (Eq.trans
+                                (congr (congrArg h ((fun x y => eq_haa_a x y) a a)) ((fun x y => eq_haa_a x y) a a))
+                                ((fun x y => eq_haa_a x y) c c)))
+                            (Eq.trans
+                              (congr (congrArg h ((fun x y => eq_haa_a x y) a a)) ((fun x y => eq_haa_a x y) a a))
+                              ((fun x y => eq_haa_a x y) c c)))
+                          ((fun x y => eq_haa_a x y) c c)))
+                      (Eq.trans
+                        (congr
+                          (congrArg h
+                            (Eq.trans
+                              (congr (congrArg h ((fun x y => eq_haa_a x y) a a)) ((fun x y => eq_haa_a x y) a a))
+                              ((fun x y => eq_haa_a x y) c c)))
+                          (Eq.trans (congr (congrArg h ((fun x y => eq_haa_a x y) a a)) ((fun x y => eq_haa_a x y) a a))
+                            ((fun x y => eq_haa_a x y) c c)))
+                        ((fun x y => eq_haa_a x y) c c)))
+                    ((fun x y => eq_haa_a x y) c c)))
+                ((fun x y => eq_haa_a x y) c c)))
+            (eq_self c))
+  [Meta.instantiateMVars] [0.000000] of_eq_true
+        (Eq.trans
+          (congrArg (fun x => x = c)
+            (Eq.trans
+              (congr
+                (congrArg h
+                  (Eq.trans
+                    (congr
+                      (congrArg h
+                        (Eq.trans
+                          (congr
+                            (congrArg h
+                              (Eq.trans
+                                (congr (congrArg h ((fun x y => eq_haa_a x y) a a)) ((fun x y => eq_haa_a x y) a a))
+                                ((fun x y => eq_haa_a x y) c c)))
+                            (Eq.trans
+                              (congr (congrArg h ((fun x y => eq_haa_a x y) a a)) ((fun x y => eq_haa_a x y) a a))
+                              ((fun x y => eq_haa_a x y) c c)))
+                          ((fun x y => eq_haa_a x y) c c)))
+                      (Eq.trans
+                        (congr
+                          (congrArg h
+                            (Eq.trans
+                              (congr (congrArg h ((fun x y => eq_haa_a x y) a a)) ((fun x y => eq_haa_a x y) a a))
+                              ((fun x y => eq_haa_a x y) c c)))
+                          (Eq.trans (congr (congrArg h ((fun x y => eq_haa_a x y) a a)) ((fun x y => eq_haa_a x y) a a))
+                            ((fun x y => eq_haa_a x y) c c)))
+                        ((fun x y => eq_haa_a x y) c c)))
+                    ((fun x y => eq_haa_a x y) c c)))
+                (Eq.trans
+                  (congr
+                    (congrArg h
+                      (Eq.trans
+                        (congr
+                          (congrArg h
+                            (Eq.trans
+                              (congr (congrArg h ((fun x y => eq_haa_a x y) a a)) ((fun x y => eq_haa_a x y) a a))
+                              ((fun x y => eq_haa_a x y) c c)))
+                          (Eq.trans (congr (congrArg h ((fun x y => eq_haa_a x y) a a)) ((fun x y => eq_haa_a x y) a a))
+                            ((fun x y => eq_haa_a x y) c c)))
+                        ((fun x y => eq_haa_a x y) c c)))
+                    (Eq.trans
+                      (congr
+                        (congrArg h
+                          (Eq.trans (congr (congrArg h ((fun x y => eq_haa_a x y) a a)) ((fun x y => eq_haa_a x y) a a))
+                            ((fun x y => eq_haa_a x y) c c)))
+                        (Eq.trans (congr (congrArg h ((fun x y => eq_haa_a x y) a a)) ((fun x y => eq_haa_a x y) a a))
+                          ((fun x y => eq_haa_a x y) c c)))
+                      ((fun x y => eq_haa_a x y) c c)))
+                  ((fun x y => eq_haa_a x y) c c)))
+              ((fun x y => eq_haa_a x y) c c)))
+          (eq_self c))
+  [Meta.instantiateMVars] [0.000000] (let HAA0 := h a a;
+        let HAA1 := h HAA0 HAA0;
+        let HAA2 := h HAA1 HAA1;
+        let HAA3 := h HAA2 HAA2;
+        let HAA4 := h HAA3 HAA3;
+        HAA4) =
+        c
+  [Meta.instantiateMVars] [0.000000] of_eq_true
+        (Eq.trans
+          (congrArg (fun x => x = c)
+            (Eq.trans
+              (congr
+                (congrArg h
+                  (Eq.trans
+                    (congr
+                      (congrArg h
+                        (Eq.trans
+                          (congr
+                            (congrArg h
+                              (Eq.trans
+                                (congr (congrArg h ((fun x y => eq_haa_a x y) a a)) ((fun x y => eq_haa_a x y) a a))
+                                ((fun x y => eq_haa_a x y) c c)))
+                            (Eq.trans
+                              (congr (congrArg h ((fun x y => eq_haa_a x y) a a)) ((fun x y => eq_haa_a x y) a a))
+                              ((fun x y => eq_haa_a x y) c c)))
+                          ((fun x y => eq_haa_a x y) c c)))
+                      (Eq.trans
+                        (congr
+                          (congrArg h
+                            (Eq.trans
+                              (congr (congrArg h ((fun x y => eq_haa_a x y) a a)) ((fun x y => eq_haa_a x y) a a))
+                              ((fun x y => eq_haa_a x y) c c)))
+                          (Eq.trans (congr (congrArg h ((fun x y => eq_haa_a x y) a a)) ((fun x y => eq_haa_a x y) a a))
+                            ((fun x y => eq_haa_a x y) c c)))
+                        ((fun x y => eq_haa_a x y) c c)))
+                    ((fun x y => eq_haa_a x y) c c)))
+                (Eq.trans
+                  (congr
+                    (congrArg h
+                      (Eq.trans
+                        (congr
+                          (congrArg h
+                            (Eq.trans
+                              (congr (congrArg h ((fun x y => eq_haa_a x y) a a)) ((fun x y => eq_haa_a x y) a a))
+                              ((fun x y => eq_haa_a x y) c c)))
+                          (Eq.trans (congr (congrArg h ((fun x y => eq_haa_a x y) a a)) ((fun x y => eq_haa_a x y) a a))
+                            ((fun x y => eq_haa_a x y) c c)))
+                        ((fun x y => eq_haa_a x y) c c)))
+                    (Eq.trans
+                      (congr
+                        (congrArg h
+                          (Eq.trans (congr (congrArg h ((fun x y => eq_haa_a x y) a a)) ((fun x y => eq_haa_a x y) a a))
+                            ((fun x y => eq_haa_a x y) c c)))
+                        (Eq.trans (congr (congrArg h ((fun x y => eq_haa_a x y) a a)) ((fun x y => eq_haa_a x y) a a))
+                          ((fun x y => eq_haa_a x y) c c)))
+                      ((fun x y => eq_haa_a x y) c c)))
+                  ((fun x y => eq_haa_a x y) c c)))
+              ((fun x y => eq_haa_a x y) c c)))
+          (eq_self c))
+  [Meta.instantiateMVars] [0.000000] (let HAA0 := h a a;
+        let HAA1 := h HAA0 HAA0;
+        let HAA2 := h HAA1 HAA1;
+        let HAA3 := h HAA2 HAA2;
+        let HAA4 := h HAA3 HAA3;
+        HAA4) =
+        c
+  [Elab.def.maxSharing] [0.000156] share common exprs
+  [Elab.def.fixLevelParams] [0.000037] fix level params
+  [Elab.def.processPreDef] [0.000365] process pre-definitions
+[Elab.command] [0.000090] end
+[Elab.async] [0.000811] Lean.addDecl
+  [Kernel] [0.000768] typechecking declarations [_example]
+[Elab.async] [0.000145] Lean.compileDecls
+  [compiler] [0.000108] compiling old: [_example]

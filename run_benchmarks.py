@@ -1,8 +1,10 @@
+import re
 import json
 import subprocess
 import os
 from pathlib import Path
 from itertools import product
+import time  
 
 def load_config(path="benchmarks.json"):
     with open(path) as f:
@@ -18,13 +20,30 @@ def generated_substituted_code(content, generated_code_type, name_val_zip):
         lines.append(f"  add (add v{n} v{n}) O")
         generated = "\n".join(lines)
         return content.replace("__LETS__", generated)
+    elif generated_code_type == "haa_gen":
+        n = dict(name_val_zip)["haa"]
+        lines = ["let HAA0 := h a a in"]
+        for i in range(1, n + 1):
+            lines.append(f"let HAA{i} := h HAA{i-1} HAA{i-1} in")
+        lines.append(f"HAA{n}")
+        expr = "\n".join(lines)
+        print(content)
+        return content.replace("__HAA__", expr)
+    elif generated_code_type == "lean_haa_gen":
+        n = dict(name_val_zip)["haa"]
+        lines = ["let HAA0 := h a a;"]
+        for i in range(1, n + 1):
+            lines.append(f"let HAA{i} := h HAA{i-1} HAA{i-1};")
+        lines.append(f"HAA{n}")
+        expr = "\n".join(lines)
+        print(content)
+        return content.replace("__HAA__", expr)
     return content
 
 def substitute_template(content, param_vals, param_ranges, bench):
     """Helper function to substitute parameters in the template content."""
     param_names = list(param_ranges.keys())
 
-    print(zip(param_names, param_vals))
     if 'codeGenerator' in bench:
         return generated_substituted_code(content, bench["codeGenerator"], zip(param_names, param_vals))
 
@@ -47,7 +66,6 @@ def collect_parameters(bench):
     return param_ranges
 
 def run_benchmark(bench, param_ranges):
-    """Run the benchmark based on the parameters."""
     template_file = bench["template"]
     summary_file = bench.get("summary", "summary.txt")
     out_dir = Path("timing_logs") / Path(template_file).parent
@@ -55,6 +73,8 @@ def run_benchmark(bench, param_ranges):
 
     param_names = list(param_ranges.keys())
     ranges = [range(v[1], v[2] + 1, v[3]) for v in param_ranges.values()]
+    is_lean = template_file.endswith(".lean")
+    compiler = "lean" if is_lean else "coqc"
 
     with open(summary_file, "w") as summary:
         for param_vals in product(*ranges):
@@ -63,22 +83,35 @@ def run_benchmark(bench, param_ranges):
             content = substitute_template(content, param_vals, param_ranges, bench)
 
             param_str = [f"{name}={val}" for name, val in zip(param_names, param_vals)]
-            tmp_file = "tmp_benchmark.v"
+            tmp_file = "tmp_benchmark.lean" if is_lean else "tmp_benchmark.v"
             with open(tmp_file, "w") as tmp:
                 tmp.write(content)
 
             log_file = out_dir / ("output_" + "_".join(param_str) + ".log")
             print(f"Running benchmark with {' '.join(param_str)}...")
-            result = subprocess.run(["coqc", tmp_file], stdout=subprocess.PIPE, stderr=subprocess.PIPE, universal_newlines=True)
+
+            start_time = time.perf_counter()
+            result = subprocess.run(
+                [compiler, tmp_file],
+                stdout=subprocess.PIPE,
+                stderr=subprocess.PIPE,
+                universal_newlines=True
+            )
+            end_time = time.perf_counter()
+            total_time = end_time - start_time
+
             with open(log_file, "w") as log:
                 log.write(result.stdout + result.stderr)
 
-            for line in result.stdout.splitlines():
-                if line.startswith("Finished transaction"):
-                    summary.write(f"{' '.join(param_str)}  {line}\n")
-                    break
+            times = re.findall(
+                r"\[Elab.command\] \[(\d+\.\d+)\] example",
+                result.stdout,
+            )
 
-    os.remove("tmp_benchmark.v")
+            internal_time = max(map(float, times)) if len(times) != 0 else None,
+            summary.write(f"{' '.join(param_str)}  InternalTime={internal_time}  TotalTime={total_time:.4f}s\n")
+
+            os.remove(tmp_file)
 
 def select_benchmarks(benchmarks):
     """Select the benchmarks to run."""
