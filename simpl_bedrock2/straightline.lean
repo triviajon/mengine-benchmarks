@@ -171,4 +171,5 @@ theorem generated_cmd_correct :
   intros v
   repeat solve_repeated
   apply exec.skip
+  -- don't care about solving post-condition for now
   sorry
