@@ -3,18 +3,6 @@ Require Import Coq.Classes.RelationClasses.
 Require Import Coq.Classes.Morphisms.
 
 Section A.
-    (* Variable @eq : (forall (A: Type), (forall (_: A), (forall (_: A), Prop))).
-    Variable @eq_refl : (forall (B: Type), (forall (x: B), (((eq B) x) x))).
-    Variable @eq_sym : forall (A : Type) (x y : A), @eq A x y -> @eq A y x.
-    Variable @eq_subst : (forall (P: Prop), (forall (Q: Prop), (forall (_: (((eq Prop) P) Q)), (forall (_: Q), P)))).
-    Variable app_cong : (forall (A: Type), (forall (B: Type), (forall (f: (forall (_: A), B)), (forall (g: (forall (_: A), B)), (forall (x: A), (forall (y: A), (forall (_: (((eq (forall (_: A), B)) f) g)), (forall (_: (((eq A) x) y)), (((eq B) (f x)) (g y)))))))))).
-    Variable @eq_trans : (forall (A: Type), (forall (x: A), (forall (y: A), (forall (z: A), (forall (_: (((eq A) x) y)), (forall (_: (((eq A) y) z)), (((eq A) x) z))))))).
-    (* Need to declare @eq to be an @equivalence relation *)
-    Instance @eq_Equivalence (A : Type) : @equivalence (eq A) := {    
-        @equivalence_Reflexive := @eq_refl A;
-        @equivalence_Symmetric := fun x y H => @eq_sym A x y H;
-        @equivalence_Transitive := @eq_trans A
-    }. *)
     Variable not : Prop -> Prop.
     Variable and : (forall (_: Prop), (forall (_: Prop), Prop)).
     Variable and_conj : (forall (A: Prop), (forall (B: Prop), (forall (_: A), (forall (_: B), ((and A) B))))).
@@ -74,15 +62,15 @@ Section A.
     Variable binop_add_to_word_add : (forall (w1: (option word)), (forall (w2: (option word)), (((@eq word) (((interp_binop bopname_add) w1) w2)) ((word_add w1) w2)))).
     Variable binop_add_to_word_sub : (forall (w1: (option word)), (forall (w2: (option word)), (((@eq word) (((interp_binop bopname_sub) w1) w2)) ((word_sub w1) w2)))).
     Inductive expr : Type :=
-    | expr_literal : Z -> expr
-    | expr_var : string -> expr
-    | expr_op : bopname -> expr -> expr -> expr.
+        | expr_literal : Z -> expr
+        | expr_var : string -> expr
+        | expr_op : bopname -> expr -> expr -> expr.
     Fixpoint eval_expr (me : partial_map word byte) (le : partial_map string word) (e : expr) : option word :=
-    match e with
-    | expr_literal v => option_some word (word_of_Z v)
-    | expr_var x => partial_map_get string word le x
-    | expr_op op e1 e2 => option_some word (interp_binop op (eval_expr me le e1) (eval_expr me le e2))
-    end.
+        match e with
+        | expr_literal v => option_some word (word_of_Z v)
+        | expr_var x => partial_map_get string word le x
+        | expr_op op e1 e2 => option_some word (interp_binop op (eval_expr me le e1) (eval_expr me le e2))
+        end.
     Variable cmd : Type.
     Variable cmd_skip : cmd.
     Variable cmd_set : (forall (lhs: string), (forall (rhs: expr), cmd)).

@@ -3,7 +3,7 @@
       {
         "name": "Coq: Symbolic Execution (Get to Post)",
         "template": "simpl_bedrock2/straightline.v",
-        "summary": "simpl_bedrock2_summary.txt",
+        "summary": "summary/simpl_bedrock2_summary.txt",
         "parameters": [
           {
             "name": "n",
@@ -15,9 +15,9 @@
         ]
       },
       {
-        "name": "repeat rewrite gfa",
+        "name": "Coq: repeat rewrite gfa",
         "template": "gfa/gfa_rewrite.v",
-        "summary": "gfa_rewrite_summary.txt",
+        "summary": "summary/gfa_rewrite_summary.txt",
         "parameters": [
           {
             "name": "n",
@@ -29,9 +29,9 @@
         ]
       },
       {
-        "name": "rewrite_strat bottomup gfa",
+        "name": "Coq: rewrite_strat bottomup gfa",
         "template": "gfa/gfa_rewrite_strat_bottomup.v",
-        "summary": "gfa_bottomup_summary.txt",
+        "summary": "summary/gfa_bottomup_summary.txt",
         "parameters": [
           {
             "name": "n",
@@ -43,9 +43,9 @@
         ]
       },
       {
-        "name": "rewrite_strat topdown gfa",
+        "name": "Coq: rewrite_strat topdown gfa",
         "template": "gfa/gfa_rewrite_strat_topdown.v",
-        "summary": "gfa_topdown_summary.txt",
+        "summary": "summary/gfa_topdown_summary.txt",
         "parameters": [
           {
             "name": "n",
@@ -57,9 +57,9 @@
         ]
       },
       {
-        "name": "Coq: let ... in ",
+        "name": "Coq (let ... in ..): rewrite add_r_0",
         "template": "addr0/let__in.v",
-        "summary": "addr0_let__in_summary.txt",
+        "summary": "summary/addr0_let__in_summary.txt",
         "codeGenerator": "addr0_let_bindings",
         "parameters": [
           {
@@ -72,9 +72,9 @@
         ]
       },
       {
-        "name": "Coq: Let_In",
+        "name": "Coq (Let_In const): setoid_rewrite add_r_0",
         "template": "addr0/LetIn.v",
-        "summary": "addr0_Let_In_summary.txt",
+        "summary": "summary/addr0_Let_In_summary.txt",
         "codeGenerator": "addr0_let_bindings",
         "parameters": [
           {
@@ -89,7 +89,7 @@
       {
         "name": "Coq: HAA",
         "template": "haa/haa_rewrite.v",
-        "summary": "coq_haa_summary.txt",
+        "summary": "summary/coq_haa_summary.txt",
         "codeGenerator": "haa_gen",
         "parameters": [
           {
@@ -104,12 +104,26 @@
       {
         "name": "Lean: HAA (repeat_rw)",
         "template": "haa/simp_only.lean",
-        "summary": "lean_haa_simp_only_summary.txt",
+        "summary": "summary/lean_haa_simp_only_summary.txt",
         "codeGenerator": "lean_haa_gen",
         "parameters": [
           {
             "name": "haa",
             "placeholder": "__HAA__",
+            "prompt_min": "Minimum n",
+            "prompt_max": "Maximum n",
+            "prompt_skip": "Skip n"
+          }
+        ]
+      },
+      {
+        "name": "Lean: Symbolic Execution",
+        "template": "simpl_bedrock2/straightline.lean",
+        "summary": "summary/straightline_summary.txt",
+        "parameters": [
+          {
+            "name": "n",
+            "placeholder": "__N__",
             "prompt_min": "Minimum n",
             "prompt_max": "Maximum n",
             "prompt_skip": "Skip n"

@@ -6,7 +6,7 @@ from pathlib import Path
 from itertools import product
 import time  
 
-def load_config(path="benchmarks.json"):
+def load_config(path="benchmark_suite.json"):
     with open(path) as f:
         return json.load(f)
     

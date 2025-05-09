@@ -1,1 +1,9 @@
-Finished transaction in 0.049 secs (0.022u,0.026s) (successful)
+tmp_benchmark.lean:14:4: warning: declaration uses 'sorry'
+tmp_benchmark.lean:15:4: warning: declaration uses 'sorry'
+tmp_benchmark.lean:16:4: warning: declaration uses 'sorry'
+tmp_benchmark.lean:43:8: warning: declaration uses 'sorry'
+tmp_benchmark.lean:56:4: warning: declaration uses 'sorry'
+tmp_benchmark.lean:58:8: warning: declaration uses 'sorry'
+tmp_benchmark.lean:60:8: warning: declaration uses 'sorry'
+tmp_benchmark.lean:109:8: warning: declaration uses 'sorry'
+tmp_benchmark.lean:156:8: warning: declaration uses 'sorry'

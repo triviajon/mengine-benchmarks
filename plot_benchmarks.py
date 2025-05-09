@@ -5,46 +5,54 @@ import matplotlib.style as style
 import matplotlib as mpl
 import numpy as np
 
+style.use('seaborn-v0_8-muted')
+
 ENGINE_ROOT = "/Users/jonros/Documents/mengine"
 BENCHMARKS_ROOT = "/Users/jonros/Documents/mengine-benchmarks"
 
 eq_f_a_main_file = f"{ENGINE_ROOT}/benchmark/rewrite_with_eq_f_a/mengine_benchmark_2_results.json"
 eq_haa_a_main_file = f"{ENGINE_ROOT}/benchmark/rewrite_with_eq_haa_a/mengine_benchmark_results.json"
-native_addr0_main_file = f"{ENGINE_ROOT}/benchmark/rewrite_addr0/native_execution_times.txt"
-tree_addr0_main_file = f"{ENGINE_ROOT}/benchmark/rewrite_addr0/tree_execution_times.txt"
-letin_addr0_main_file = f"{ENGINE_ROOT}/benchmark/rewrite_addr0/letin_execution_times.txt"
-sym_exec_main_file = f"{ENGINE_ROOT}/benchmark/symbolic_execution/execution_times.txt"
+native_addr0_main_file = f"{ENGINE_ROOT}/benchmark/rewrite_addr0/nativemengine_benchmark_results.json"
+tree_addr0_main_file = f"{ENGINE_ROOT}/benchmark/rewrite_addr0/treemengine_benchmark_results.json"
+letin_addr0_main_file = f"{ENGINE_ROOT}/benchmark/rewrite_addr0/letinmengine_benchmark_results.json"
+sym_exec_main_file = f"{ENGINE_ROOT}/benchmark/symbolic_execution/mengine_benchmark_results.json"
 
 main_files = [
-    {"name": "eq_f_a_main_file", "path": eq_f_a_main_file, "type": "mengine"},
+    {"name": "MEngine: rewrite gfa", "path": eq_f_a_main_file, "type": "mengine"},
     {"name": "eq_haa_a_main_file", "path": eq_haa_a_main_file, "type": "mengine"},
-    {"name": "Approach A", "path": tree_addr0_main_file, "type": "mengine"},
-    {"name": "Approach B", "path": native_addr0_main_file, "type": "mengine"},
-    {"name": "Approach C", "path": letin_addr0_main_file, "type": "mengine"},
+    {"name": "MEngine (No sharing): rewrite add_r_O", "path": tree_addr0_main_file, "type": "mengine"},
+    {"name": "MEngine (Native sharing): rewrite add_r_O", "path": native_addr0_main_file, "type": "mengine"},
+    {"name": "MEngine (With LetIn Const): rewrite add_r_O", "path": letin_addr0_main_file, "type": "mengine"},
     {"name": "Our Approach (Get to and Solve Post)", "path": sym_exec_main_file, "type": "mengine"},
 ]
 
 markers = ['o', 's', 'D', '^', 'v', 'p', 'H', 'x']
 
-reds = plt.cm.Reds(np.linspace(0.4, 0.9, 10))
-blues = plt.cm.Blues(np.linspace(0.4, 0.9, 10))
-greens = plt.cm.Greens(np.linspace(0.4, 0.9, 10))
+def spaced_colors(cmap_name, n, alpha=1.0):
+    cmap = mpl.cm.get_cmap(cmap_name)
+    return [(*cmap(i)[0:3], alpha) for i in np.linspace(0.25, 0.85, n)]
+
+reds = spaced_colors("Reds", 4)
+greens = spaced_colors("Greens", 4)
+blues = spaced_colors("Blues", 4)
 
 def load_config():
-    with open("benchmarks.json") as f:
+    with open("benchmark_suite.json") as f:
         return json.load(f)
 
 def parse_coq_benchmark_data(summary_file):
     n_values = []
     coq_times = []
     total_times = []
-    pattern = r"haa=(\d+).*?Finished transaction in ([\d.]+) secs.*?TotalTime=([\d.]+)s"
+    pattern = r"n=(\d+).*?InternalTime=\(([\w.]+),\).*?TotalTime=([\d.]+)s"
     with open(summary_file, 'r') as file:
         for line in file:
             match = re.search(pattern, line)
             if match:
                 n_values.append(int(match.group(1)))
-                coq_times.append(float(match.group(2)))
+                internal_time = match.group(2)
+                if internal_time != "None":
+                    coq_times.append(float(internal_time))
                 total_times.append(float(match.group(3)))
     return n_values, coq_times, total_times
 
@@ -67,8 +75,10 @@ def plot_dual_benchmark(n_values, times1, times2, label1, label2, marker, colors
         times1 = np.convolve(times1, np.ones(5)/5, mode='valid')
         times2 = np.convolve(times2, np.ones(5)/5, mode='valid')
         n_values = n_values[2:-2]
-    plt.plot(n_values, times1, marker=marker, linestyle='-', color=colors[0], label=label1)
-    plt.plot(n_values, times2, marker=marker, linestyle='--', color=colors[1], label=label2)
+    if (len(times1) > 0):
+        plt.plot(n_values, times1, marker=marker, linestyle='-', color=colors[0], label=label1)
+    if (len(times2) > 0):
+        plt.plot(n_values, times2, marker=marker, linestyle='--', color=colors[1], label=label2)
 
 def parse_mengine_output(file_name):
     with open(file_name, 'r') as f:
@@ -136,9 +146,8 @@ def main():
                         n_values, tactic_times, total_times = parse_lean_benchmark_data(summary_file)
                     else:
                         raise ValueError("Unsupported template file type")
-                    
                     plot_dual_benchmark(n_values, tactic_times, total_times,
-                                        f"{benchmark['name']} [Tactic]", f"{benchmark['name']} [Total]",
+                                        f"{benchmark['name']} [Tactic]", f"{benchmark['name']}",
                                         marker, (color, color))
                 except Exception as e:
                     print(f"Error processing {summary_file}: {e}")
@@ -157,7 +166,7 @@ def main():
     plt.ylabel('Execution Time (secs)', fontsize=14)
     plt.xticks(fontsize=12)
     plt.yticks(fontsize=12)
-    plt.title('Benchmark Execution Time vs n', fontsize=16)
+    plt.title('Benchmark Execution Time', fontsize=16)
     plt.legend(fontsize=12)
     plt.tight_layout()
     plt.grid(True)

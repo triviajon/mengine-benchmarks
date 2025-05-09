@@ -1,4 +1,6 @@
 tmp_benchmark.v
+tmp_benchmark.lean
 **/*.vo*
 **/*.glob
 **/*.aux
+**/.DS_STORE
