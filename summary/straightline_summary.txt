@@ -1,6 +1,0 @@
-n=1  InternalTime=(None,)  TotalTime=3.9721s
-n=2  InternalTime=(None,)  TotalTime=3.2847s
-n=3  InternalTime=(None,)  TotalTime=3.5900s
-n=4  InternalTime=(None,)  TotalTime=4.0873s
-n=5  InternalTime=(None,)  TotalTime=6.0257s
-n=6  InternalTime=(None,)  TotalTime=19.2874s

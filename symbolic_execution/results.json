@@ -1,0 +1,110 @@
+{
+    "mengine_n1": {
+        "time_taken": 0.09284042500001988,
+        "success": true
+    },
+    "mengine_n4": {
+        "time_taken": 0.2502945249999584,
+        "success": true
+    },
+    "mengine_n7": {
+        "time_taken": 0.45634149199997864,
+        "success": true
+    },
+    "mengine_n10": {
+        "time_taken": 0.5886631839999836,
+        "success": true
+    },
+    "mengine_n13": {
+        "time_taken": 1.975330609000025,
+        "success": true
+    },
+    "coqc_n1": {
+        "time_taken": 0.20236815800001295,
+        "success": true
+    },
+    "coqc_n4": {
+        "time_taken": 0.4322532360000082,
+        "success": true
+    },
+    "mengine_n6": {
+        "time_taken": 0.2918675680000433,
+        "success": true
+    },
+    "mengine_n11": {
+        "time_taken": 1.2222949169999993,
+        "success": true
+    },
+    "mengine_n16": {
+        "time_taken": 1.3169235580000418,
+        "success": true
+    },
+    "mengine_n21": {
+        "time_taken": 1.8932413800000063,
+        "success": true
+    },
+    "mengine_n26": {
+        "time_taken": 1.8104322329999718,
+        "success": true
+    },
+    "mengine_n31": {
+        "time_taken": 1.7919209599999704,
+        "success": true
+    },
+    "mengine_n36": {
+        "time_taken": 2.0916313910000213,
+        "success": true
+    },
+    "mengine_n41": {
+        "time_taken": 2.21719803000002,
+        "success": true
+    },
+    "mengine_n46": {
+        "time_taken": 2.3621246559999918,
+        "success": true
+    },
+    "mengine_n51": {
+        "time_taken": 2.4400772600000096,
+        "success": true
+    },
+    "mengine_n56": {
+        "time_taken": 2.4687644399999726,
+        "success": true
+    },
+    "mengine_n61": {
+        "time_taken": 2.7830295580000097,
+        "success": true
+    },
+    "mengine_n66": {
+        "time_taken": 3.0380274439999653,
+        "success": true
+    },
+    "mengine_n71": {
+        "time_taken": 3.0621813589999647,
+        "success": true
+    },
+    "coqc_n2": {
+        "time_taken": 0.15467720200001622,
+        "success": true
+    },
+    "coqc_n3": {
+        "time_taken": 0.2355434279999713,
+        "success": true
+    },
+    "coqc_n5": {
+        "time_taken": 1.031213775000026,
+        "success": true
+    },
+    "coqc_n6": {
+        "time_taken": 3.4328472110000234,
+        "success": true
+    },
+    "coqc_n7": {
+        "time_taken": 13.273605051000004,
+        "success": true
+    },
+    "coqc_n8": {
+        "time_taken": 55.038128900000004,
+        "success": true
+    }
+}

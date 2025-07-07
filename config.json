@@ -1,0 +1,8 @@
+{
+    "benchmark_file": "benchmarks.json",
+    "mengine_path": "~/mengine/main",
+    "coqc_path": "coqc",
+    "lean_path": "lean",
+    "coqutil_root_path": "~/coqutil",
+    "output_dir": "benchmarks_output"
+}

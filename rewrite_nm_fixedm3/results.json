@@ -1,0 +1,850 @@
+{
+    "mengine_n1_m3": {
+        "time_taken": 0.0023193080000964983,
+        "success": true
+    },
+    "mengine_n1_m5": {
+        "time_taken": 0.0020293000000037864,
+        "success": true
+    },
+    "mengine_n26_m3": {
+        "time_taken": 0.015007523999884143,
+        "success": true
+    },
+    "mengine_n26_m5": {
+        "time_taken": 0.01900892499998008,
+        "success": true
+    },
+    "mengine_n51_m3": {
+        "time_taken": 0.032253975000003265,
+        "success": true
+    },
+    "mengine_n51_m5": {
+        "time_taken": 0.03180493399997886,
+        "success": true
+    },
+    "mengine_n76_m3": {
+        "time_taken": 0.041409659000009924,
+        "success": true
+    },
+    "mengine_n76_m5": {
+        "time_taken": 0.047888857999964785,
+        "success": true
+    },
+    "coqc_n1_m1": {
+        "time_taken": 0.10377629100003105,
+        "success": true
+    },
+    "coqc_n4_m1": {
+        "time_taken": 0.09328583299998172,
+        "success": true
+    },
+    "coqc_n7_m1": {
+        "time_taken": 0.1039085669999622,
+        "success": true
+    },
+    "coqc_n10_m1": {
+        "time_taken": 0.10586073299998588,
+        "success": true
+    },
+    "coqc_n13_m1": {
+        "time_taken": 0.1071498999999676,
+        "success": true
+    },
+    "coqc_n16_m1": {
+        "time_taken": 0.09084313300002123,
+        "success": true
+    },
+    "coqc_n19_m1": {
+        "time_taken": 0.1030324749999636,
+        "success": true
+    },
+    "coqc_n22_m1": {
+        "time_taken": 0.09746479199998248,
+        "success": true
+    },
+    "mengine_n101_m3": {
+        "time_taken": 0.03184469200004969,
+        "success": true
+    },
+    "mengine_n126_m3": {
+        "time_taken": 0.061448508000012225,
+        "success": true
+    },
+    "mengine_n151_m3": {
+        "time_taken": 0.0520099670000036,
+        "success": true
+    },
+    "mengine_n176_m3": {
+        "time_taken": 0.07370382500016603,
+        "success": true
+    },
+    "mengine_n201_m3": {
+        "time_taken": 0.062332617000038226,
+        "success": true
+    },
+    "mengine_n226_m3": {
+        "time_taken": 0.07092659199997797,
+        "success": true
+    },
+    "mengine_n251_m3": {
+        "time_taken": 0.11926763399992524,
+        "success": true
+    },
+    "mengine_n276_m3": {
+        "time_taken": 0.12411771600000066,
+        "success": true
+    },
+    "mengine_n301_m3": {
+        "time_taken": 0.11226529099985783,
+        "success": true
+    },
+    "mengine_n326_m3": {
+        "time_taken": 0.10853104100010569,
+        "success": true
+    },
+    "mengine_n351_m3": {
+        "time_taken": 0.09805174100006298,
+        "success": true
+    },
+    "mengine_n376_m3": {
+        "time_taken": 0.12838355800022327,
+        "success": true
+    },
+    "mengine_n401_m3": {
+        "time_taken": 0.13716679200001636,
+        "success": true
+    },
+    "mengine_n426_m3": {
+        "time_taken": 0.16281741700004204,
+        "success": true
+    },
+    "mengine_n451_m3": {
+        "time_taken": 0.15456241700007922,
+        "success": true
+    },
+    "mengine_n476_m3": {
+        "time_taken": 0.20376936599996043,
+        "success": true
+    },
+    "mengine_n501_m3": {
+        "time_taken": 0.15157198300016717,
+        "success": true
+    },
+    "mengine_n526_m3": {
+        "time_taken": 0.1633716500000446,
+        "success": true
+    },
+    "mengine_n551_m3": {
+        "time_taken": 0.1757586999999603,
+        "success": true
+    },
+    "mengine_n576_m3": {
+        "time_taken": 0.22619956599987745,
+        "success": true
+    },
+    "mengine_n601_m3": {
+        "time_taken": 0.1851669090001451,
+        "success": true
+    },
+    "mengine_n626_m3": {
+        "time_taken": 0.188957167000126,
+        "success": true
+    },
+    "mengine_n651_m3": {
+        "time_taken": 0.19998517499993795,
+        "success": true
+    },
+    "mengine_n676_m3": {
+        "time_taken": 0.20497739100005674,
+        "success": true
+    },
+    "mengine_n701_m3": {
+        "time_taken": 0.1990438660000109,
+        "success": true
+    },
+    "mengine_n726_m3": {
+        "time_taken": 0.27970680800012815,
+        "success": true
+    },
+    "mengine_n751_m3": {
+        "time_taken": 0.22277742500000386,
+        "success": true
+    },
+    "mengine_n776_m3": {
+        "time_taken": 0.2589897909999763,
+        "success": true
+    },
+    "mengine_n801_m3": {
+        "time_taken": 0.25189417499996125,
+        "success": true
+    },
+    "mengine_n826_m3": {
+        "time_taken": 0.27724157500006186,
+        "success": true
+    },
+    "mengine_n851_m3": {
+        "time_taken": 0.30813759199986634,
+        "success": true
+    },
+    "mengine_n876_m3": {
+        "time_taken": 0.3133828749998884,
+        "success": true
+    },
+    "mengine_n901_m3": {
+        "time_taken": 0.25057824999998957,
+        "success": true
+    },
+    "mengine_n926_m3": {
+        "time_taken": 0.2904180499999711,
+        "success": true
+    },
+    "mengine_n951_m3": {
+        "time_taken": 0.26976310800000647,
+        "success": true
+    },
+    "mengine_n976_m3": {
+        "time_taken": 0.2848250160000134,
+        "success": true
+    },
+    "mengine_n1001_m3": {
+        "time_taken": 0.29200285799993253,
+        "success": true
+    },
+    "mengine_n1026_m3": {
+        "time_taken": 0.290347200000042,
+        "success": true
+    },
+    "mengine_n1051_m3": {
+        "time_taken": 0.3561767080000209,
+        "success": true
+    },
+    "mengine_n1076_m3": {
+        "time_taken": 0.33530477500016787,
+        "success": true
+    },
+    "mengine_n1101_m3": {
+        "time_taken": 0.33719638299999133,
+        "success": true
+    },
+    "mengine_n1126_m3": {
+        "time_taken": 0.31633625900008155,
+        "success": true
+    },
+    "mengine_n1151_m3": {
+        "time_taken": 0.3600717249998979,
+        "success": true
+    },
+    "mengine_n1176_m3": {
+        "time_taken": 0.3472199249999903,
+        "success": true
+    },
+    "mengine_n1201_m3": {
+        "time_taken": 0.34100755000008576,
+        "success": true
+    },
+    "mengine_n1226_m3": {
+        "time_taken": 0.3613983750001353,
+        "success": true
+    },
+    "mengine_n1251_m3": {
+        "time_taken": 0.3424393919999602,
+        "success": true
+    },
+    "mengine_n1276_m3": {
+        "time_taken": 0.3683686500000931,
+        "success": true
+    },
+    "mengine_n1301_m3": {
+        "time_taken": 0.3788236830000642,
+        "success": true
+    },
+    "mengine_n1326_m3": {
+        "time_taken": 0.39931493400013096,
+        "success": true
+    },
+    "mengine_n1351_m3": {
+        "time_taken": 0.4150085339999805,
+        "success": true
+    },
+    "mengine_n1376_m3": {
+        "time_taken": 0.4040008919998854,
+        "success": true
+    },
+    "mengine_n1401_m3": {
+        "time_taken": 0.4835284999999203,
+        "success": true
+    },
+    "mengine_n1426_m3": {
+        "time_taken": 0.4486837329998252,
+        "success": true
+    },
+    "mengine_n1451_m3": {
+        "time_taken": 0.43387110000003304,
+        "success": true
+    },
+    "mengine_n1476_m3": {
+        "time_taken": 0.47345111599997836,
+        "success": true
+    },
+    "mengine_n1501_m3": {
+        "time_taken": 0.46981339199987815,
+        "success": true
+    },
+    "mengine_n1526_m3": {
+        "time_taken": 0.4622689499999524,
+        "success": true
+    },
+    "mengine_n1551_m3": {
+        "time_taken": 0.5102188000000751,
+        "success": true
+    },
+    "mengine_n1576_m3": {
+        "time_taken": 0.46459486599997035,
+        "success": true
+    },
+    "mengine_n1601_m3": {
+        "time_taken": 0.48427329200012537,
+        "success": true
+    },
+    "mengine_n1626_m3": {
+        "time_taken": 0.5622236750000411,
+        "success": true
+    },
+    "mengine_n1651_m3": {
+        "time_taken": 0.4698913919999086,
+        "success": true
+    },
+    "mengine_n1676_m3": {
+        "time_taken": 0.49201110900003187,
+        "success": true
+    },
+    "mengine_n1701_m3": {
+        "time_taken": 0.5535801920000267,
+        "success": true
+    },
+    "mengine_n1726_m3": {
+        "time_taken": 0.5268224000001283,
+        "success": true
+    },
+    "mengine_n1751_m3": {
+        "time_taken": 0.5349880249998478,
+        "success": true
+    },
+    "mengine_n1776_m3": {
+        "time_taken": 0.5584540000002107,
+        "success": true
+    },
+    "mengine_n1801_m3": {
+        "time_taken": 0.5306783080000059,
+        "success": true
+    },
+    "mengine_n1826_m3": {
+        "time_taken": 0.5822909080000045,
+        "success": true
+    },
+    "mengine_n1851_m3": {
+        "time_taken": 0.5962688330000674,
+        "success": true
+    },
+    "mengine_n1876_m3": {
+        "time_taken": 0.5972902000000886,
+        "success": true
+    },
+    "mengine_n1901_m3": {
+        "time_taken": 0.604203274999918,
+        "success": true
+    },
+    "mengine_n1926_m3": {
+        "time_taken": 0.5673092749998432,
+        "success": true
+    },
+    "mengine_n1951_m3": {
+        "time_taken": 0.5934384080001109,
+        "success": true
+    },
+    "mengine_n1976_m3": {
+        "time_taken": 0.5875847249999424,
+        "success": true
+    },
+    "mengine_n2001_m3": {
+        "time_taken": 0.6387816500000554,
+        "success": true
+    },
+    "mengine_n2026_m3": {
+        "time_taken": 0.6972196829999575,
+        "success": true
+    },
+    "mengine_n2051_m3": {
+        "time_taken": 0.630908958999953,
+        "success": true
+    },
+    "mengine_n2076_m3": {
+        "time_taken": 0.6491805670000304,
+        "success": true
+    },
+    "mengine_n2101_m3": {
+        "time_taken": 0.695625125000106,
+        "success": true
+    },
+    "mengine_n2126_m3": {
+        "time_taken": 0.7107953659999566,
+        "success": true
+    },
+    "mengine_n2151_m3": {
+        "time_taken": 0.6864036839999699,
+        "success": true
+    },
+    "mengine_n2176_m3": {
+        "time_taken": 0.7506055910000669,
+        "success": true
+    },
+    "mengine_n2201_m3": {
+        "time_taken": 0.743851333000066,
+        "success": true
+    },
+    "mengine_n2226_m3": {
+        "time_taken": 0.718952649999892,
+        "success": true
+    },
+    "mengine_n2251_m3": {
+        "time_taken": 0.7461375999998836,
+        "success": true
+    },
+    "mengine_n2276_m3": {
+        "time_taken": 0.7509942910000973,
+        "success": true
+    },
+    "mengine_n2301_m3": {
+        "time_taken": 0.7641600410001956,
+        "success": true
+    },
+    "mengine_n2326_m3": {
+        "time_taken": 0.7822732669999368,
+        "success": true
+    },
+    "mengine_n2351_m3": {
+        "time_taken": 0.8020323999999164,
+        "success": true
+    },
+    "mengine_n2376_m3": {
+        "time_taken": 0.7767002749999392,
+        "success": true
+    },
+    "mengine_n2401_m3": {
+        "time_taken": 0.8211168340001223,
+        "success": true
+    },
+    "mengine_n2426_m3": {
+        "time_taken": 0.888595174999864,
+        "success": true
+    },
+    "mengine_n2451_m3": {
+        "time_taken": 0.8346153830000276,
+        "success": true
+    },
+    "mengine_n2476_m3": {
+        "time_taken": 0.8742407920001369,
+        "success": true
+    },
+    "mengine_n2501_m3": {
+        "time_taken": 0.8800359750000553,
+        "success": true
+    },
+    "mengine_n2526_m3": {
+        "time_taken": 0.9039909660000376,
+        "success": true
+    },
+    "mengine_n2551_m3": {
+        "time_taken": 0.9293267749999359,
+        "success": true
+    },
+    "mengine_n2576_m3": {
+        "time_taken": 0.8944963090000329,
+        "success": true
+    },
+    "mengine_n2601_m3": {
+        "time_taken": 0.9480694169999424,
+        "success": true
+    },
+    "mengine_n2626_m3": {
+        "time_taken": 0.9344320919999518,
+        "success": true
+    },
+    "mengine_n2651_m3": {
+        "time_taken": 0.9639985339999839,
+        "success": true
+    },
+    "mengine_n2676_m3": {
+        "time_taken": 1.042343141000174,
+        "success": true
+    },
+    "mengine_n2701_m3": {
+        "time_taken": 1.0093131749999884,
+        "success": true
+    },
+    "mengine_n2726_m3": {
+        "time_taken": 1.0073861420000867,
+        "success": true
+    },
+    "mengine_n2751_m3": {
+        "time_taken": 1.0507116750000023,
+        "success": true
+    },
+    "mengine_n2776_m3": {
+        "time_taken": 1.0148301579999952,
+        "success": true
+    },
+    "mengine_n2801_m3": {
+        "time_taken": 1.0963141590000305,
+        "success": true
+    },
+    "mengine_n2826_m3": {
+        "time_taken": 1.0309378090000791,
+        "success": true
+    },
+    "mengine_n2851_m3": {
+        "time_taken": 1.1195790670001315,
+        "success": true
+    },
+    "mengine_n2876_m3": {
+        "time_taken": 1.0898707090000244,
+        "success": true
+    },
+    "mengine_n2901_m3": {
+        "time_taken": 1.1289872749998722,
+        "success": true
+    },
+    "mengine_n2926_m3": {
+        "time_taken": 1.138411625000117,
+        "success": true
+    },
+    "mengine_n2951_m3": {
+        "time_taken": 1.1383031830000618,
+        "success": true
+    },
+    "mengine_n2976_m3": {
+        "time_taken": 1.1553336169999966,
+        "success": true
+    },
+    "mengine_n3001_m3": {
+        "time_taken": 1.2172434080000585,
+        "success": true
+    },
+    "mengine_n3026_m3": {
+        "time_taken": 1.186374800000067,
+        "success": true
+    },
+    "mengine_n3051_m3": {
+        "time_taken": 1.2231140999999752,
+        "success": true
+    },
+    "mengine_n3076_m3": {
+        "time_taken": 1.2202743579998696,
+        "success": true
+    },
+    "mengine_n3101_m3": {
+        "time_taken": 1.299655066000014,
+        "success": true
+    },
+    "mengine_n3126_m3": {
+        "time_taken": 1.4023935249999795,
+        "success": true
+    },
+    "mengine_n3151_m3": {
+        "time_taken": 1.2624277249999523,
+        "success": true
+    },
+    "mengine_n3176_m3": {
+        "time_taken": 1.359715174999792,
+        "success": true
+    },
+    "mengine_n3201_m3": {
+        "time_taken": 1.329215116999876,
+        "success": true
+    },
+    "mengine_n3226_m3": {
+        "time_taken": 1.3712526750000507,
+        "success": true
+    },
+    "mengine_n3251_m3": {
+        "time_taken": 1.4143460499999492,
+        "success": true
+    },
+    "mengine_n3276_m3": {
+        "time_taken": 1.5013839749999534,
+        "success": true
+    },
+    "mengine_n3301_m3": {
+        "time_taken": 1.348504950000006,
+        "success": true
+    },
+    "mengine_n3326_m3": {
+        "time_taken": 1.4465329669999392,
+        "success": true
+    },
+    "mengine_n3351_m3": {
+        "time_taken": 1.373881707999999,
+        "success": true
+    },
+    "mengine_n3376_m3": {
+        "time_taken": 1.4619982000001528,
+        "success": true
+    },
+    "mengine_n3401_m3": {
+        "time_taken": 1.4360559420001664,
+        "success": true
+    },
+    "mengine_n3426_m3": {
+        "time_taken": 1.4277953089999755,
+        "success": true
+    },
+    "mengine_n3451_m3": {
+        "time_taken": 1.5309638500000347,
+        "success": true
+    },
+    "mengine_n3476_m3": {
+        "time_taken": 1.505622732999882,
+        "success": true
+    },
+    "mengine_n3501_m3": {
+        "time_taken": 1.5020156670000233,
+        "success": true
+    },
+    "mengine_n3526_m3": {
+        "time_taken": 1.551762983000117,
+        "success": true
+    },
+    "mengine_n3551_m3": {
+        "time_taken": 1.6731618579999576,
+        "success": true
+    },
+    "mengine_n3576_m3": {
+        "time_taken": 1.6218624499999805,
+        "success": true
+    },
+    "mengine_n3601_m3": {
+        "time_taken": 2.308339149999938,
+        "success": true
+    },
+    "mengine_n3626_m3": {
+        "time_taken": 1.6718724750001002,
+        "success": true
+    },
+    "mengine_n3651_m3": {
+        "time_taken": 2.04127625000001,
+        "success": true
+    },
+    "mengine_n3676_m3": {
+        "time_taken": 2.146293066999988,
+        "success": true
+    },
+    "mengine_n3701_m3": {
+        "time_taken": 1.843222767000043,
+        "success": true
+    },
+    "mengine_n3726_m3": {
+        "time_taken": 2.856204324999908,
+        "success": true
+    },
+    "mengine_n3751_m3": {
+        "time_taken": 2.8803460829999494,
+        "success": true
+    },
+    "mengine_n3776_m3": {
+        "time_taken": 1.8182777160000114,
+        "success": true
+    },
+    "mengine_n3801_m3": {
+        "time_taken": 1.7829075329999569,
+        "success": true
+    },
+    "mengine_n3826_m3": {
+        "time_taken": 1.721822917000054,
+        "success": true
+    },
+    "mengine_n3851_m3": {
+        "time_taken": 1.853908875000002,
+        "success": true
+    },
+    "mengine_n3876_m3": {
+        "time_taken": 1.8742483500000162,
+        "success": true
+    },
+    "mengine_n3901_m3": {
+        "time_taken": 1.769948050000039,
+        "success": true
+    },
+    "mengine_n3926_m3": {
+        "time_taken": 1.8997567330000038,
+        "success": true
+    },
+    "mengine_n3951_m3": {
+        "time_taken": 2.0455960409999534,
+        "success": true
+    },
+    "mengine_n3976_m3": {
+        "time_taken": 1.9432026250000263,
+        "success": true
+    },
+    "coqc_n1_m3": {
+        "time_taken": 0.14540586700002223,
+        "success": true
+    },
+    "coqc_n11_m3": {
+        "time_taken": 0.1407599909999817,
+        "success": true
+    },
+    "coqc_n21_m3": {
+        "time_taken": 0.12872025800004394,
+        "success": true
+    },
+    "coqc_n31_m3": {
+        "time_taken": 0.16474564100008138,
+        "success": true
+    },
+    "coqc_n41_m3": {
+        "time_taken": 0.21192751599994608,
+        "success": true
+    },
+    "coqc_n51_m3": {
+        "time_taken": 0.37742325900001106,
+        "success": true
+    },
+    "coqc_n61_m3": {
+        "time_taken": 0.393333417000008,
+        "success": true
+    },
+    "coqc_n71_m3": {
+        "time_taken": 0.4087000659999376,
+        "success": true
+    },
+    "coqc_n81_m3": {
+        "time_taken": 0.6126852330000929,
+        "success": true
+    },
+    "coqc_n91_m3": {
+        "time_taken": 0.6683405080000284,
+        "success": true
+    },
+    "coqc_n101_m3": {
+        "time_taken": 0.8654440169999589,
+        "success": true
+    },
+    "coqc_n111_m3": {
+        "time_taken": 1.01202519200001,
+        "success": true
+    },
+    "coqc_n121_m3": {
+        "time_taken": 1.2691964999999072,
+        "success": true
+    },
+    "coqc_n131_m3": {
+        "time_taken": 1.6895629829999734,
+        "success": true
+    },
+    "coqc_n141_m3": {
+        "time_taken": 2.1740638830000307,
+        "success": true
+    },
+    "coqc_n151_m3": {
+        "time_taken": 2.5826979749999737,
+        "success": true
+    },
+    "coqc_n161_m3": {
+        "time_taken": 3.231375117000084,
+        "success": true
+    },
+    "coqc_n171_m3": {
+        "time_taken": 3.8792392159999736,
+        "success": true
+    },
+    "coqc_n181_m3": {
+        "time_taken": 4.926322158000062,
+        "success": true
+    },
+    "coqc_n191_m3": {
+        "time_taken": 5.5663274329999695,
+        "success": true
+    },
+    "coqc_n201_m3": {
+        "time_taken": 6.669070415999954,
+        "success": true
+    },
+    "coqc_n211_m3": {
+        "time_taken": 7.87714275899998,
+        "success": true
+    },
+    "coqc_n221_m3": {
+        "time_taken": 9.169950724999921,
+        "success": true
+    },
+    "coqc_n231_m3": {
+        "time_taken": 10.887058217000003,
+        "success": true
+    },
+    "coqc_n241_m3": {
+        "time_taken": 12.268713815999945,
+        "success": true
+    },
+    "coqc_n251_m3": {
+        "time_taken": 14.765954448999992,
+        "success": true
+    },
+    "coqc_n261_m3": {
+        "time_taken": 18.84381904199995,
+        "success": true
+    },
+    "coqc_n271_m3": {
+        "time_taken": 21.752933799999937,
+        "success": true
+    },
+    "coqc_n281_m3": {
+        "time_taken": 24.73248645800004,
+        "success": true
+    },
+    "coqc_n291_m3": {
+        "time_taken": 27.093520892000015,
+        "success": true
+    },
+    "coqc_n301_m3": {
+        "time_taken": 0.11899875000000293,
+        "success": false
+    },
+    "coqc_n311_m3": {
+        "time_taken": 0.11720951699999205,
+        "success": false
+    },
+    "coqc_n321_m3": {
+        "time_taken": 0.180728600000009,
+        "success": false
+    },
+    "coqc_n331_m3": {
+        "time_taken": 0.10877370800000108,
+        "success": false
+    },
+    "coqc_n341_m3": {
+        "time_taken": 0.16590805800001363,
+        "success": false
+    },
+    "coqc_n351_m3": {
+        "time_taken": 0.13404375900000787,
+        "success": false
+    },
+    "coqc_n361_m3": {
+        "time_taken": 0.12389292500000693,
+        "success": false
+    },
+    "coqc_n371_m3": {
+        "time_taken": 0.1292132840000022,
+        "success": false
+    },
+    "coqc_n381_m3": {
+        "time_taken": 0.13502959099997724,
+        "success": false
+    },
+    "coqc_n391_m3": {
+        "time_taken": 0.10840862499998138,
+        "success": false
+    }
+}

@@ -1,0 +1,16 @@
+{
+  "engines": {
+    "mengine": {
+      "args": ["n", "m"],
+      "n": { "start": 1, "stop": 2000, "step": 25 },
+      "m": { "start": 5, "stop": 6, "step": 1 },
+      "timeout": 30
+    },
+    "coqc": {
+      "args": ["n", "m"],
+      "n": { "start": 1, "stop": 36, "step": 5 },
+      "m": { "start": 5, "stop": 6, "step": 1 },
+      "timeout": 30
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+    "Separation": {
+        "description": "Separation",
+        "subdirectory": "separation_logic"
+    },
+    "Rewrite fa": {
+        "description":"Rewriting ffffa",
+        "subdirectory": "rewrite_fa"
+    },
+    "Rewriting in addr0": {
+        "description": "Rewriting in addr0",
+        "subdirectory": "addr0__let__in"
+    },
+    "Rewriting recursive let-bindings 1": {
+        "description": "Rewriting recursive let-bindings",
+        "subdirectory": "rewrite_nm_fixedn3"
+    },
+    "Rewriting recursive let-bindings 2": {
+        "description": "Rewriting recursive let-bindings",
+        "subdirectory": "rewrite_nm_fixedm3"
+    },
+    "Rewriting recursive let-bindings 3": {
+        "description": "Rewriting recursive let-bindings",
+        "subdirectory": "rewrite_nm_fixedm5"
+    },
+    "Symbolic Execution": {
+        "description": "Symbolic execution",
+        "subdirectory": "symbolic_execution"
+    }
+}

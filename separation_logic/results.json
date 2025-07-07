@@ -1,0 +1,362 @@
+{
+    "mengine_n1": {
+        "time_taken": 0.004060332983499393,
+        "success": true
+    },
+    "mengine_n6": {
+        "time_taken": 0.012410234019625932,
+        "success": true
+    },
+    "mengine_n11": {
+        "time_taken": 0.020168958988506347,
+        "success": true
+    },
+    "mengine_n16": {
+        "time_taken": 0.032272285025101155,
+        "success": true
+    },
+    "mengine_n21": {
+        "time_taken": 0.042385201988508925,
+        "success": true
+    },
+    "mengine_n26": {
+        "time_taken": 0.05504481800016947,
+        "success": true
+    },
+    "mengine_n31": {
+        "time_taken": 0.07630014399182983,
+        "success": true
+    },
+    "mengine_n36": {
+        "time_taken": 0.1497902300034184,
+        "success": true
+    },
+    "mengine_n41": {
+        "time_taken": 0.11975567898480222,
+        "success": true
+    },
+    "mengine_n46": {
+        "time_taken": 0.1418835220101755,
+        "success": true
+    },
+    "coqc_n1": {
+        "time_taken": 0.5137408419977874,
+        "success": true
+    },
+    "coqc_n6": {
+        "time_taken": 0.4837608919769991,
+        "success": true
+    },
+    "coqc_n11": {
+        "time_taken": 0.45670193299883977,
+        "success": true
+    },
+    "coqc_n16": {
+        "time_taken": 0.7326667000015732,
+        "success": true
+    },
+    "coqc_n21": {
+        "time_taken": 0.7477704260090832,
+        "success": true
+    },
+    "coqc_n26": {
+        "time_taken": 0.5455595359962899,
+        "success": true
+    },
+    "coqc_n31": {
+        "time_taken": 0.6951284410024527,
+        "success": true
+    },
+    "coqc_n36": {
+        "time_taken": 0.6284972630091943,
+        "success": true
+    },
+    "coqc_n41": {
+        "time_taken": 0.7995140020211693,
+        "success": true
+    },
+    "coqc_n46": {
+        "time_taken": 0.6310772220022045,
+        "success": true
+    },
+    "mengine_n51": {
+        "time_taken": 0.20972673199139535,
+        "success": true
+    },
+    "mengine_n61": {
+        "time_taken": 0.24484255001880229,
+        "success": true
+    },
+    "mengine_n71": {
+        "time_taken": 0.370959995983867,
+        "success": true
+    },
+    "mengine_n81": {
+        "time_taken": 0.4764896660053637,
+        "success": true
+    },
+    "mengine_n91": {
+        "time_taken": 0.6467498059791978,
+        "success": true
+    },
+    "mengine_n101": {
+        "time_taken": 0.7598824180022348,
+        "success": true
+    },
+    "mengine_n111": {
+        "time_taken": 1.0508581780013628,
+        "success": true
+    },
+    "mengine_n121": {
+        "time_taken": 1.1870837740134448,
+        "success": true
+    },
+    "mengine_n131": {
+        "time_taken": 1.6129995390074328,
+        "success": true
+    },
+    "mengine_n141": {
+        "time_taken": 1.8703320560161956,
+        "success": true
+    },
+    "mengine_n151": {
+        "time_taken": 2.102148281002883,
+        "success": true
+    },
+    "mengine_n161": {
+        "time_taken": 2.706898552016355,
+        "success": true
+    },
+    "mengine_n171": {
+        "time_taken": 3.0354281720065046,
+        "success": true
+    },
+    "mengine_n181": {
+        "time_taken": 3.4828461539873388,
+        "success": true
+    },
+    "mengine_n191": {
+        "time_taken": 4.075825250009075,
+        "success": true
+    },
+    "mengine_n201": {
+        "time_taken": 4.712024254986318,
+        "success": true
+    },
+    "mengine_n211": {
+        "time_taken": 5.460706956015201,
+        "success": true
+    },
+    "mengine_n221": {
+        "time_taken": 6.152640537999105,
+        "success": true
+    },
+    "mengine_n231": {
+        "time_taken": 7.037926268996671,
+        "success": true
+    },
+    "mengine_n241": {
+        "time_taken": 7.644566956005292,
+        "success": true
+    },
+    "mengine_n251": {
+        "time_taken": 8.839664906001417,
+        "success": true
+    },
+    "coqc_n51": {
+        "time_taken": 1.128905600000003,
+        "success": true
+    },
+    "coqc_n61": {
+        "time_taken": 0.7700850999999957,
+        "success": true
+    },
+    "coqc_n71": {
+        "time_taken": 0.8515987999999979,
+        "success": true
+    },
+    "coqc_n81": {
+        "time_taken": 1.0999908000000005,
+        "success": true
+    },
+    "coqc_n91": {
+        "time_taken": 1.2786912999999984,
+        "success": true
+    },
+    "coqc_n101": {
+        "time_taken": 1.4184594999999973,
+        "success": true
+    },
+    "coqc_n111": {
+        "time_taken": 1.7020788000000024,
+        "success": true
+    },
+    "coqc_n121": {
+        "time_taken": 1.961535099999999,
+        "success": true
+    },
+    "coqc_n131": {
+        "time_taken": 2.0600767999999974,
+        "success": true
+    },
+    "coqc_n141": {
+        "time_taken": 2.478446599999998,
+        "success": true
+    },
+    "coqc_n151": {
+        "time_taken": 2.623544900000006,
+        "success": true
+    },
+    "coqc_n161": {
+        "time_taken": 3.1693574000000098,
+        "success": true
+    },
+    "coqc_n171": {
+        "time_taken": 3.431935800000005,
+        "success": true
+    },
+    "coqc_n181": {
+        "time_taken": 3.7298021000000006,
+        "success": true
+    },
+    "coqc_n191": {
+        "time_taken": 4.18786209999999,
+        "success": true
+    },
+    "coqc_n201": {
+        "time_taken": 4.6160150999999985,
+        "success": true
+    },
+    "coqc_n211": {
+        "time_taken": 5.169920833999996,
+        "success": true
+    },
+    "coqc_n221": {
+        "time_taken": 5.723718123000012,
+        "success": true
+    },
+    "coqc_n231": {
+        "time_taken": 6.182949164000007,
+        "success": true
+    },
+    "coqc_n241": {
+        "time_taken": 6.989223200000012,
+        "success": true
+    },
+    "mengine_n261": {
+        "time_taken": 8.947939703000003,
+        "success": true
+    },
+    "coqc_n251": {
+        "time_taken": 8.010245641000012,
+        "success": true
+    },
+    "coqc_n261": {
+        "time_taken": 8.682114350000006,
+        "success": true
+    },
+    "coqc_n271": {
+        "time_taken": 9.435848716999999,
+        "success": true
+    },
+    "mengine_n271": {
+        "time_taken": 11.485448865999842,
+        "success": true
+    },
+    "mengine_n281": {
+        "time_taken": 12.106806074999895,
+        "success": true
+    },
+    "mengine_n291": {
+        "time_taken": 13.223589600000196,
+        "success": true
+    },
+    "mengine_n301": {
+        "time_taken": 13.78441945800023,
+        "success": true
+    },
+    "mengine_n311": {
+        "time_taken": 15.748565408000104,
+        "success": true
+    },
+    "mengine_n321": {
+        "time_taken": 16.350560957999733,
+        "success": true
+    },
+    "mengine_n331": {
+        "time_taken": 17.960300474999713,
+        "success": true
+    },
+    "mengine_n341": {
+        "time_taken": 19.267104242000187,
+        "success": true
+    },
+    "mengine_n351": {
+        "time_taken": 21.390612966999925,
+        "success": true
+    },
+    "mengine_n361": {
+        "time_taken": 22.71614171600004,
+        "success": true
+    },
+    "mengine_n371": {
+        "time_taken": 25.016964916000234,
+        "success": true
+    },
+    "mengine_n381": {
+        "time_taken": 26.305258417000005,
+        "success": true
+    },
+    "mengine_n391": {
+        "time_taken": 27.70101598300016,
+        "success": true
+    },
+    "coqc_n281": {
+        "time_taken": 10.90142191699988,
+        "success": true
+    },
+    "coqc_n291": {
+        "time_taken": 11.832471516999703,
+        "success": true
+    },
+    "coqc_n301": {
+        "time_taken": 11.967904433000058,
+        "success": true
+    },
+    "coqc_n311": {
+        "time_taken": 13.309952175000035,
+        "success": true
+    },
+    "coqc_n321": {
+        "time_taken": 15.811551599999802,
+        "success": true
+    },
+    "coqc_n331": {
+        "time_taken": 17.1361755490002,
+        "success": true
+    },
+    "coqc_n341": {
+        "time_taken": 16.703287792000083,
+        "success": true
+    },
+    "coqc_n351": {
+        "time_taken": 17.312355991999993,
+        "success": true
+    },
+    "coqc_n361": {
+        "time_taken": 18.83560401600016,
+        "success": true
+    },
+    "coqc_n371": {
+        "time_taken": 20.09078673299973,
+        "success": true
+    },
+    "coqc_n381": {
+        "time_taken": 21.800166266999895,
+        "success": true
+    },
+    "coqc_n391": {
+        "time_taken": 22.639219959000002,
+        "success": true
+    }
+}
