@@ -830,5 +830,113 @@
     "lean_n477_simp": {
         "time_taken": 0.9249805529998412,
         "success": true
+    },
+    "lean_n502_repeat": {
+        "time_taken": 9.693700439995155,
+        "success": false
+    },
+    "lean_n502_simp": {
+        "time_taken": 1.1126924940035678,
+        "success": true
+    },
+    "lean_n552_repeat": {
+        "time_taken": 10.584346592993825,
+        "success": false
+    },
+    "lean_n552_simp": {
+        "time_taken": 1.0050087470008293,
+        "success": true
+    },
+    "lean_n602_simp": {
+        "time_taken": 1.1713587590056704,
+        "success": true
+    },
+    "lean_n652_simp": {
+        "time_taken": 1.2656175599986454,
+        "success": true
+    },
+    "lean_n702_simp": {
+        "time_taken": 1.624100485991221,
+        "success": true
+    },
+    "lean_n752_simp": {
+        "time_taken": 1.3595109640009468,
+        "success": true
+    },
+    "lean_n802_simp": {
+        "time_taken": 1.4264685540110804,
+        "success": true
+    },
+    "lean_n852_simp": {
+        "time_taken": 1.645703895992483,
+        "success": true
+    },
+    "lean_n902_simp": {
+        "time_taken": 1.6035682080109837,
+        "success": true
+    },
+    "lean_n952_simp": {
+        "time_taken": 9.131216645007953,
+        "success": false
+    },
+    "lean_n1002_simp": {
+        "time_taken": 9.462276442005532,
+        "success": false
+    },
+    "lean_n1052_simp": {
+        "time_taken": 9.318226849994971,
+        "success": false
+    },
+    "lean_n1102_simp": {
+        "time_taken": 10.999867072998313,
+        "success": false
+    },
+    "lean_n1152_simp": {
+        "time_taken": 10.598797987011494,
+        "success": false
+    },
+    "lean_n1202_simp": {
+        "time_taken": 9.675926665004226,
+        "success": false
+    },
+    "lean_n1252_simp": {
+        "time_taken": 10.748890495000524,
+        "success": false
+    },
+    "lean_n1302_simp": {
+        "time_taken": 10.110721183009446,
+        "success": false
+    },
+    "lean_n1352_simp": {
+        "time_taken": 10.25424308401125,
+        "success": false
+    },
+    "lean_n1402_simp": {
+        "time_taken": 10.274552893999498,
+        "success": false
+    },
+    "lean_n1452_simp": {
+        "time_taken": 10.186176995994174,
+        "success": false
+    },
+    "lean_n1502_simp": {
+        "time_taken": 10.7438191040128,
+        "success": false
+    },
+    "lean_n1552_simp": {
+        "time_taken": 8.957927857001778,
+        "success": false
+    },
+    "lean_n1602_simp": {
+        "time_taken": 9.075025840997114,
+        "success": false
+    },
+    "lean_n1652_simp": {
+        "time_taken": 7.3336253610032145,
+        "success": false
+    },
+    "lean_n1702_simp": {
+        "time_taken": 8.47750843600079,
+        "success": false
     }
 }

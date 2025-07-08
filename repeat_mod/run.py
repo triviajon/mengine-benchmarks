@@ -120,6 +120,10 @@ def main():
             save_results(results)
     elif engine == "lean":
         for strategy in ["repeat", "simp"]:
+            if strategy == "repeat" and n > 500:
+                print(f"Skipping {strategy} for n={n} as it causes stack overflow.")
+                continue
+
             key = f"{engine}_n{n}_{strategy}"
             results = load_results()
             if key in results:

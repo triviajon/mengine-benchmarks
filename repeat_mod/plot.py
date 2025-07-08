@@ -59,7 +59,7 @@ def plot_benchmark(results, output_dir):
         if engine_strat and n is not None:
             data_by_engine_strat.setdefault(engine_strat, []).append((n, value["time_taken"]))
 
-    plt.figure(figsize=(10,6))
+    plt.figure(figsize=(8,6))
 
     for engine, points in data_by_engine_strat.items():
         if not points:
