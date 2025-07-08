@@ -2,12 +2,17 @@
   "engines": {
     "mengine": {
       "args": ["n"],
-      "n": { "start": 1, "stop": 500, "step": 10 },
+      "n": { "start": 1, "stop": 1000, "step": 10 },
       "timeout": 60
     },
     "coqc": {
       "args": ["n"],
-      "n": { "start": 1, "stop": 13, "step": 1 },
+      "n": { "start": 1, "stop": 20, "step": 1 },
+      "timeout": 60
+    },
+    "lean": {
+      "args": ["n"],
+      "n": { "start": 1, "stop": 1000, "step": 10 },
       "timeout": 60
     }
   }

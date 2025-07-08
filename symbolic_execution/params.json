@@ -9,6 +9,11 @@
       "args": ["n"],
       "n": { "start": 1, "stop": 10, "step": 1 },
       "timeout": 60
+    },
+    "lean": {
+      "args": ["n"],
+      "n": { "start": 1, "stop": 15, "step": 1 },
+      "timeout": 60
     }
   }
 }

@@ -103,8 +103,44 @@
         "time_taken": 13.273605051000004,
         "success": true
     },
-    "coqc_n8": {
-        "time_taken": 55.038128900000004,
+    "lean_n1": {
+        "time_taken": 1.9959166479998203,
         "success": true
+    },
+    "lean_n2": {
+        "time_taken": 2.1057491600001867,
+        "success": true
+    },
+    "lean_n3": {
+        "time_taken": 2.399173031999908,
+        "success": true
+    },
+    "lean_n4": {
+        "time_taken": 2.3398668249999446,
+        "success": true
+    },
+    "lean_n5": {
+        "time_taken": 4.020997267999974,
+        "success": true
+    },
+    "lean_n6": {
+        "time_taken": 12.321714251999992,
+        "success": true
+    },
+    "lean_n7": {
+        "time_taken": 60.079457736999984,
+        "success": false
+    },
+    "lean_n8": {
+        "time_taken": 60.088979606000066,
+        "success": false
+    },
+    "lean_n9": {
+        "time_taken": 60.079301272000066,
+        "success": false
+    },
+    "lean_n10": {
+        "time_taken": 60.077544559999296,
+        "success": false
     }
 }

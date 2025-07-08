@@ -388,7 +388,6 @@ def main():
     exe_path = os.path.expanduser(sys.argv[4])
     timeout = int(sys.argv[5])
 
-
     if engine == "mengine":
         key = f"{engine}_n{n}"
         results = load_results()
@@ -427,8 +426,12 @@ def main():
           save_results(results)
     elif engine == "lean":
       key = f"{engine}_n{n}"
-
+      results = load_results()
+      if key in results:
+          print(f"Skipping {key} as it has already been run.")
+          return
       filename = f"test_n{n}.lean"
+      generate_lean_file(n, filename)
       start = time.perf_counter()
       try:
           proc = subprocess.run([exe_path, filename], capture_output=True, text=True, timeout=timeout)

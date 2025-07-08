@@ -6,9 +6,31 @@ import sys
 
 RESULTS_FILE_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "results.json")
 
-colors = {'mengine': 'blue', 'repeatrewrite': 'red', 'repeatsetoidrewrite': 'red', 'rewritebottomup': 'red', 'rewritetopdown': 'red'}
-markers = {'mengine': 'x', 'repeatrewrite': 'o', 'repeatsetoidrewrite': '*', 'rewritebottomup': 's', 'rewritetopdown': 'D', 'lean': 'v'}
+colors = {'mengine': 'blue', 'repeatrewrite': 'red', 'repeatsetoidrewrite': 'red', 'rewritebottomup': 'red', 'rewritetopdown': 'red', 'rewritebng': 'red', 'lean': 'green'}
+markers = {'mengine': 'x', 'repeatrewrite': 'o', 'repeatsetoidrewrite': '*', 'rewritebottomup': 's', 'rewritetopdown': 'D', 'rewritebng': 'P', 'lean': 'v'}
+engine_strat_to_label = {
+    "mengine": "MEngine",
+    "repeatrewrite": "Rocq: repeat rewrite",
+    "repeatsetoidrewrite": "Rocq: repeat setoid_rewrite",
+    "rewritebottomup": "Rocq: rewrite_strat bottomup",
+    "rewrite!": "Rocq: rewrite_strat bottomup",
+    "rewritetopdown": "Rocq: rewrite_strat topdown",
+    "rewritebng": "Rocq: rewrite!",
+    'lean': "Lean: repeat rw"
+}
 
+
+plt.style.use('seaborn-v0_8-whitegrid')
+plt.rcParams.update({
+    "font.size": 14,
+    "axes.titlesize": 16,
+    "axes.labelsize": 14,
+    "legend.fontsize": 12,
+    "xtick.labelsize": 12,
+    "ytick.labelsize": 12,
+    "axes.grid": False,
+    "font.family": "serif",
+})
 
 def load_results():
     if not os.path.exists(RESULTS_FILE_PATH):
@@ -23,14 +45,14 @@ def parse_key(key):
     engine = None
     n = None
     for part in parts:
-        if part in ('mengine', 'repeatrewrite', 'repeatsetoidrewrite', 'rewritebottomup', 'rewritetopdown', 'lean'):
+        if part in ('mengine', 'repeatrewrite', 'repeatsetoidrewrite', 'rewritebottomup', 'rewritetopdown', 'lean', 'rewritebng'):
             engine = part
         elif part.startswith('n'):
             n = int(part[1:])
     return engine, n
 
 def plot_benchmark(results, output_dir):
-    data_by_engine_strat = {'mengine': [], 'repeatrewrite': [], 'repeatsetoidrewrite': [], 'rewritebottomup': [], 'rewritetopdown': [], 'lean': []}
+    data_by_engine_strat = {'mengine': [], 'repeatrewrite': [], 'repeatsetoidrewrite': [], 'rewritebottomup': [], 'rewritetopdown': [], 'lean': [], 'rewritebng': []}
 
     for key, value in results.items():
         if not value.get("success", False):
@@ -47,7 +69,7 @@ def plot_benchmark(results, output_dir):
         ns, ts = zip(*sorted(points))
         plt.plot(
             ns, ts,
-            label=engine,
+            label=engine_strat_to_label[engine],
             color=colors.get(engine, 'black'),
             marker=markers.get(engine, 'o'),
             alpha=0.7,
@@ -56,16 +78,15 @@ def plot_benchmark(results, output_dir):
             zorder=2
         )
 
-    plt.xlabel("n")
+    plt.xlabel("n (# Rewriting Locations)")
     plt.ylabel("Time (seconds)")
-    plt.title("Benchmark runtimes by engine (all data points, ignoring m)")
     plt.legend()
-    plt.grid(True)
+    plt.grid(True, which='major', axis='both', linestyle='--', linewidth=0.5)
     plt.tight_layout()
 
     output_path = os.path.join(output_dir, "benchmark_plot.png")
     os.makedirs(output_dir, exist_ok=True)  
-    plt.savefig(output_path, dpi=300)
+    plt.savefig(output_path, dpi=300, bbox_inches='tight')
     print(f"Plot saved to {output_path}")
 
 def main():

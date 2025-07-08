@@ -11,6 +11,12 @@
       "n": { "start": 1, "stop": 301, "step": 10 },
       "m": { "start": 3, "stop": 4, "step": 1 },
       "timeout": 30
+    },
+    "lean": {
+      "args": ["n", "m"],
+      "n": { "start": 1, "stop": 4000, "step": 50 },
+      "m": { "start": 3, "stop": 4, "step": 1 },
+      "timeout": 30
     }
   }
 }

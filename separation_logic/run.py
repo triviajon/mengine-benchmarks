@@ -5,8 +5,6 @@ import time
 import subprocess
 import json
 
-from sympy import content
-
 RESULTS_FILE_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "results.json")
 
 def generate_coq_file(n, filename):

@@ -110,7 +110,7 @@ def run_benchmark(config, benchmark):
 
             print(f"Executing: {' '.join(cmd)} with timeout {timeout}s")
             try:
-                result = subprocess.run(cmd, capture_output=True, text=True, timeout=timeout)
+                result = subprocess.run(cmd, capture_output=True, text=True)
                 if result.stdout:
                     print(f"Output for {engine} with args {args_values}:\n{result.stdout}")
                 if result.stderr:

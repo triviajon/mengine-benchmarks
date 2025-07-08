@@ -9,7 +9,13 @@
     "coqc": {
       "args": ["n", "m"],
       "n": { "start": 3, "stop": 4, "step": 1 },
-      "m": { "start": 1, "stop": 14, "step": 5 },
+      "m": { "start": 1, "stop": 15, "step": 2 },
+      "timeout": 30
+    },
+    "lean": {
+      "args": ["n", "m"],
+      "n": { "start": 3, "stop": 4, "step": 1 },
+      "m": { "start": 1, "stop": 1500, "step": 50 },
       "timeout": 30
     }
   }

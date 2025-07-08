@@ -6,6 +6,10 @@ import subprocess
 import json
 
 RESULTS_FILE_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "results.json")
+strat_to_label = {
+    "repeat": "simp only\n  repeat rw [add_r_O]",
+    "simp": "simp only [add_r_O]",
+}
 
 def generate_coq_file_let__in(n, filename):
     content = """Require Import Coq.Setoids.Setoid.
@@ -145,6 +149,36 @@ End Test."""
     with open(filename, "w") as f:
         f.write(content)
 
+def generate_lean_file(n, filename, strategy):
+    content = f"""set_option maxHeartbeats 0
+set_option maxRecDepth 50000
+section Test
+
+variable (v0 : Nat)
+variable (add : Nat → Nat → Nat)
+
+theorem add_r_O : ∀ n : Nat, n + 0 = n := sorry
+
+def computation (x0: Nat) : Nat :=
+  __LETS__
+
+theorem test_goal : (computation v0 = 0) := by
+  unfold computation
+  {strat_to_label[strategy]}
+  sorry
+end Test
+"""
+    lines = []
+    for i in range(1, n + 1):
+        vprev = "x0" if i == 1 else f"x{i-1}"
+        lines.append(f"  let x{i} := ({vprev} + {vprev}) + 0")
+    lines.append(f"  (x{n} + x{n}) + 0")
+    generated = "\n".join(lines)
+    content = content.replace("__LETS__", generated)
+
+    with open(filename, "w") as f:
+        f.write(content)
+
 def load_results():
     if not os.path.exists(RESULTS_FILE_PATH):
         return {}
@@ -185,6 +219,10 @@ def main():
         save_results(results)
     elif engine == "coqc":
         for method in ["letin", "LetInConst"]:
+            if method == "letin" and n > 12:
+                print(f"Skipping {method} for n={n}, as it is not supported.")
+                continue
+
             key = f"{engine}_{method}_n{n}"
             results = load_results()
             if key in results:
@@ -209,6 +247,32 @@ def main():
 
             results[key] = {"time_taken": end - start, "success": success}
             save_results(results)
+    elif engine == "lean":
+      for strategy in ["repeat", "simp"]:
+        if strategy == "repeat" and n > 18:
+            print(f"Skipping {strategy} for n={n}, as it is not supported.")
+            continue
+
+        key = f"{engine}_n{n}_{strategy}"
+        results = load_results()
+        if key in results:
+            print(f"Skipping {key}, already exists in results.")
+            return
+
+        filename = f"test_n{n}_{strategy}.lean"
+        generate_lean_file(n, filename, strategy)
+
+        start = time.perf_counter()
+        try:
+            proc = subprocess.run([exe_path, filename], capture_output=True, text=True, timeout=timeout)
+            success = proc.returncode == 0
+        except subprocess.TimeoutExpired:
+            success = False
+        end = time.perf_counter()
+        os.remove(filename)
+
+        results[key] = {"time_taken": end - start, "success": success}
+        save_results(results)
     else:
         print(f"Unknown engine '{engine}'")
         sys.exit(1)

@@ -7,7 +7,23 @@ import sys
 RESULTS_FILE_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "results.json")
 colors = {'mengine': 'blue', 'coqc': 'red', 'lean': 'green'}
 markers = {'mengine': 'x', 'coqc': 'o', 'lean': '^'}
+engine_strat_to_label = {
+    "mengine": "MEngine",
+    "coqc": "Rocq",
+    "lean": "Lean",
+}
 
+plt.style.use('seaborn-v0_8-whitegrid')
+plt.rcParams.update({
+    "font.size": 14,
+    "axes.titlesize": 16,
+    "axes.labelsize": 14,
+    "legend.fontsize": 12,
+    "xtick.labelsize": 12,
+    "ytick.labelsize": 12,
+    "axes.grid": False,
+    "font.family": "serif",
+})
 
 def load_results():
     if not os.path.exists(RESULTS_FILE_PATH):
@@ -44,18 +60,17 @@ def plot_benchmark(results, output_dir):
         if not points:
             continue
         ns, ts = zip(*sorted(points))
-        plt.scatter(ns, ts, label=engine, color=colors.get(engine, 'black'), marker=markers.get(engine, 'o'), alpha=0.7)
+        plt.plot(ns, ts, label=engine_strat_to_label[engine], color=colors.get(engine, 'black'), marker=markers.get(engine, 'o'), alpha=0.7)
 
-    plt.xlabel("n")
+    plt.xlabel("n (# clauses)")
     plt.ylabel("Time (seconds)")
-    plt.title("Benchmark runtimes by engine (all data points, ignoring m)")
     plt.legend()
-    plt.grid(True)
+    plt.grid(True, which='major', axis='both', linestyle='--', linewidth=0.5)
     plt.tight_layout()
 
     output_path = os.path.join(output_dir, "benchmark_plot.png")
     os.makedirs(output_dir, exist_ok=True)  
-    plt.savefig(output_path, dpi=300)
+    plt.savefig(output_path, dpi=300, bbox_inches='tight')
     print(f"Plot saved to {output_path}")
 
 def main():

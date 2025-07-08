@@ -26,5 +26,9 @@
     "Symbolic Execution": {
         "description": "Symbolic execution",
         "subdirectory": "symbolic_execution"
-    }
+    },
+    "RepeatMod": {
+        "description": "Rewriting with repeat mod",
+        "subdirectory": "repeat_mod"
+    } 
 }
