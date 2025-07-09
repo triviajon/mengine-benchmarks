@@ -24,7 +24,7 @@ Section Test.
   Variable app_cong : (forall (A: Type), (forall (B: Type), (forall (f: (forall (_: A), B)), (forall (g: (forall (_: A), B)), (forall (x: A), (forall (y: A), (forall (_: (((eq (forall (_: A), B)) f) g)), (forall (_: (((eq A) x) y)), (((eq B) (f x)) (g y)))))))))).
   Variable eq_trans : (forall (A: Type), (forall (x: A), (forall (y: A), (forall (z: A), (forall (_: (((eq A) x) y)), (forall (_: (((eq A) y) z)), (((eq A) x) z))))))).
   
-  Variable nat : Type.
+  Variable nat : Set.
   Variable v0 : nat.
   Variable O : nat.
   Variable add : nat -> nat -> nat.
@@ -114,7 +114,7 @@ End LetIn.
 
 
 Section Test.
-  Local Parameter nat : Type.
+  Local Parameter nat : Set.
   Local Parameter v0 : nat.
   Local Parameter O : nat.
   Local Parameter add : nat -> nat -> nat.
@@ -224,11 +224,10 @@ def main():
                 continue
 
             key = f"{engine}_{method}_n{n}"
-            results = load_results()
-            if key in results:
-                print(f"Skipping {key}, already exists in results.")
-                continue
-
+            # results = load_results()
+            # if key in results:
+            #     print(f"Skipping {key}, already exists in results.")
+            #     continue
 
             filename = f"test_{method}_n{n}.v"
             if method == "letin":
@@ -245,6 +244,7 @@ def main():
             end = time.perf_counter()
             os.remove(filename)
 
+            results = load_results()
             results[key] = {"time_taken": end - start, "success": success}
             save_results(results)
     elif engine == "lean":

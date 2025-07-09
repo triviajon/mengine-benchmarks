@@ -16,61 +16,61 @@ Section A.
     Variable not : Prop -> Prop.
     Variable and : (forall (_: Prop), (forall (_: Prop), Prop)).
     Variable and_conj : (forall (A: Prop), (forall (B: Prop), (forall (_: A), (forall (_: B), ((and A) B))))).
-    Variable lambda_extensionality : (forall (A: Type), (forall (B: Type), (forall (f: (forall (_: A), B)), (forall (g: (forall (_: A), B)), (forall (_: (forall (x: A), (((@eq B) (f x)) (g x)))), (((@eq (forall (_: A), B)) f) g)))))).
-    Variable nat : Type.
+    Variable lambda_extensionality : (forall (A: Set), (forall (B: Set), (forall (f: (forall (_: A), B)), (forall (g: (forall (_: A), B)), (forall (_: (forall (x: A), (((@eq B) (f x)) (g x)))), (((@eq (forall (_: A), B)) f) g)))))).
+    Variable nat : Set.
     Variable add : (forall (_: nat), (forall (_: nat), nat)).
     Variable O : nat.
     Variable add_r_O : (forall (n: nat), (((@eq nat) ((add n) O)) n)).
     Variable f : (forall (_: nat), nat).
     Variable g : (forall (_: nat), nat).
     Variable h : (forall (_: nat), (forall (_: nat), nat)).
-    Variable positive : Type.
+    Variable positive : Set.
     Variable xI : (forall (_: positive), positive).
     Variable xO : (forall (_: positive), positive).
     Variable xH : positive.
-    Variable N : Type.
+    Variable N : Set.
     Variable N0 : N.
-    Variable Z : Type.
+    Variable Z : Set.
     Variable Z0 : Z.
     Variable Zpos : (forall (_: positive), Z).
     Variable Zneg : (forall (_: positive), Z).
-    Variable string : Type.
+    Variable string : Set.
     Variable a : string.
     Variable b : string.
     Variable c : string.
-    Variable list : (forall (_: Type), Type).
-    Variable list_nil : (forall (A: Type), (list A)).
-    Variable list_cons : (forall (A: Type), (forall (_: A), (forall (_: (list A)), (list A)))).
-    Variable option : (forall (_: Type), Type).
-    Variable option_some : (forall (A: Type), (forall (_: A), (option A))).
-    Variable option_none : (forall (A: Type), (option A)).
-    Variable word : Type.
+    Variable list : (forall (_: Set), Set).
+    Variable list_nil : (forall (A: Set), (list A)).
+    Variable list_cons : (forall (A: Set), (forall (_: A), (forall (_: (list A)), (list A)))).
+    Variable option : (forall (_: Set), Set).
+    Variable option_some : (forall (A: Set), (forall (_: A), (option A))).
+    Variable option_none : (forall (A: Set), (option A)).
+    Variable word : Set.
     Variable word_of_Z : (forall (_: Z), word).
     Variable word_add : (forall (_: (option word)), (forall (_: (option word)), word)).
     Variable word_sub : (forall (_: (option word)), (forall (_: (option word)), word)).
-    Variable byte : Type.
-    Variable partial_map : (forall (_: Type), (forall (_: Type), Type)).
-    Variable partial_map_empty : (forall (A: Type), (forall (B: Type), ((partial_map A) B))).
-    Variable partial_map_get : (forall (A: Type), (forall (B: Type), (forall (_: ((partial_map A) B)), (forall (_: A), (option B))))).
-    Variable partial_map_put : (forall (A: Type), (forall (B: Type), (forall (_: ((partial_map A) B)), (forall (_: A), (forall (_: B), ((partial_map A) B)))))).
-    Variable partial_map_remove : (forall (A: Type), (forall (B: Type), (forall (_: ((partial_map A) B)), (forall (_: A), (option B))))).
-    Variable partial_map_get_put_same : (forall (A: Type), (forall (B: Type), (forall (map: ((partial_map A) B)), (forall (k: A), (forall (v: B), (((@eq (option B)) ((((partial_map_get A) B) (((((partial_map_put A) B) map) k) v)) k)) ((option_some B) v))))))).
-    Variable partial_map_get_put_diff : (forall (A: Type), (forall (B: Type), (forall (map: ((partial_map A) B)), (forall (k: A), (forall (v: B), forall (k': A), not (@eq A k k') -> (((@eq (option B)) ((((partial_map_get A) B) (((((partial_map_put A) B) map) k') v)) k)) (((partial_map_get A) B) map k))))))).
+    Variable byte : Set.
+    Variable partial_map : (forall (_: Set), (forall (_: Set), Set)).
+    Variable partial_map_empty : (forall (A: Set), (forall (B: Set), ((partial_map A) B))).
+    Variable partial_map_get : (forall (A: Set), (forall (B: Set), (forall (_: ((partial_map A) B)), (forall (_: A), (option B))))).
+    Variable partial_map_put : (forall (A: Set), (forall (B: Set), (forall (_: ((partial_map A) B)), (forall (_: A), (forall (_: B), ((partial_map A) B)))))).
+    Variable partial_map_remove : (forall (A: Set), (forall (B: Set), (forall (_: ((partial_map A) B)), (forall (_: A), (option B))))).
+    Variable partial_map_get_put_same : (forall (A: Set), (forall (B: Set), (forall (map: ((partial_map A) B)), (forall (k: A), (forall (v: B), (((@eq (option B)) ((((partial_map_get A) B) (((((partial_map_put A) B) map) k) v)) k)) ((option_some B) v))))))).
+    Variable partial_map_get_put_diff : (forall (A: Set), (forall (B: Set), (forall (map: ((partial_map A) B)), (forall (k: A), (forall (v: B), forall (k': A), not (@eq A k k') -> (((@eq (option B)) ((((partial_map_get A) B) (((((partial_map_put A) B) map) k') v)) k)) (((partial_map_get A) B) map k))))))).
     Variable partial_map_put_put_same :
-        forall (A B : Type) (map : partial_map A B) (k : A) (v1 v2 : B),
+        forall (A B : Set) (map : partial_map A B) (k : A) (v1 v2 : B),
         @eq (partial_map A B) (partial_map_put A B (partial_map_put A B map k v1) k v2)
         (partial_map_put A B map k v2).
 
     Variable word_add_sub_cancel : forall (v: word), @eq (option word)
         (option_some word (word_sub (option_some word (word_add (option_some word v) (option_some word v))) (option_some word v))) 
         (option_some word v).
-    Variable bopname : Type.
+    Variable bopname : Set.
     Variable bopname_add : bopname.
     Variable bopname_sub : bopname.
     Variable interp_binop : (forall (_: bopname), (forall (_: (option word)), (forall (_: (option word)), word))).
     Variable binop_add_to_word_add : (forall (w1: (option word)), (forall (w2: (option word)), (((@eq word) (((interp_binop bopname_add) w1) w2)) ((word_add w1) w2)))).
     Variable binop_add_to_word_sub : (forall (w1: (option word)), (forall (w2: (option word)), (((@eq word) (((interp_binop bopname_sub) w1) w2)) ((word_sub w1) w2)))).
-    Inductive expr : Type :=
+    Inductive expr : Set :=
         | expr_literal : Z -> expr
         | expr_var : string -> expr
         | expr_op : bopname -> expr -> expr -> expr.
@@ -80,7 +80,7 @@ Section A.
         | expr_var x => partial_map_get string word le x
         | expr_op op e1 e2 => option_some word (interp_binop op (eval_expr me le e1) (eval_expr me le e2))
         end.
-    Variable cmd : Type.
+    Variable cmd : Set.
     Variable cmd_skip : cmd.
     Variable cmd_set : (forall (lhs: string), (forall (rhs: expr), cmd)).
     Variable cmd_unset : (forall (lhs: string), cmd).
@@ -88,7 +88,7 @@ Section A.
     Variable cmd_seq : (forall (s1: cmd), (forall (s2: cmd), cmd)).
     Variable cmd_input : forall (lhs: string), cmd.
     Variable cmd_output : forall (arg: string), cmd.
-    Variable IOEvent : Type.
+    Variable IOEvent : Set.
     Variable IOEvent_IN : word -> IOEvent.
     Variable IOEvent_OUT : word -> IOEvent.      
     Variable exec : cmd ->
@@ -117,8 +117,8 @@ Section A.
         exec (cmd_input lhs) t m l post.
     Variable word_add_0_r : forall x : word,
         @eq word (word_add (option_some word x) (option_some word (word_of_Z Z0))) x.
-    Variable ex : forall (A: Type), forall (P: A -> Prop), Prop.
-    Variable ex_intro : forall (A: Type), forall (P: A -> Prop), 
+    Variable ex : forall (A: Set), forall (P: A -> Prop), Prop.
+    Variable ex_intro : forall (A: Set), forall (P: A -> Prop), 
         forall (x: A), P x -> ex A P.
     Variable not_eq_string_b_a : (not (((@eq string) b) a)).
 
@@ -391,9 +391,9 @@ def main():
     if engine == "mengine":
         key = f"{engine}_n{n}"
         results = load_results()
-        if key in results:
-            print(f"Skipping {key} as it has already been run.")
-            return
+        # if key in results:
+        #     print(f"Skipping {key} as it has already been run.")
+        #     return
         args = [exe_path, "--proof=0", "sym", str(n)]
         start = time.perf_counter()
         subprocess.run(args, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)

@@ -1,6 +1,6 @@
 {
     "mengine_n1": {
-        "time_taken": 0.09284042500001988,
+        "time_taken": 0.05732647499826271,
         "success": true
     },
     "mengine_n4": {
@@ -28,59 +28,59 @@
         "success": true
     },
     "mengine_n6": {
-        "time_taken": 0.2918675680000433,
+        "time_taken": 0.225998897003592,
         "success": true
     },
     "mengine_n11": {
-        "time_taken": 1.2222949169999993,
+        "time_taken": 1.1739826179982629,
         "success": true
     },
     "mengine_n16": {
-        "time_taken": 1.3169235580000418,
+        "time_taken": 1.2612045940040844,
         "success": true
     },
     "mengine_n21": {
-        "time_taken": 1.8932413800000063,
+        "time_taken": 1.5602648970088921,
         "success": true
     },
     "mengine_n26": {
-        "time_taken": 1.8104322329999718,
+        "time_taken": 1.665349384988076,
         "success": true
     },
     "mengine_n31": {
-        "time_taken": 1.7919209599999704,
+        "time_taken": 1.8210111039952608,
         "success": true
     },
     "mengine_n36": {
-        "time_taken": 2.0916313910000213,
+        "time_taken": 1.6499838039890165,
         "success": true
     },
     "mengine_n41": {
-        "time_taken": 2.21719803000002,
+        "time_taken": 2.2217139109998243,
         "success": true
     },
     "mengine_n46": {
-        "time_taken": 2.3621246559999918,
+        "time_taken": 2.331849907990545,
         "success": true
     },
     "mengine_n51": {
-        "time_taken": 2.4400772600000096,
+        "time_taken": 2.2536977550043957,
         "success": true
     },
     "mengine_n56": {
-        "time_taken": 2.4687644399999726,
+        "time_taken": 2.5388558379927417,
         "success": true
     },
     "mengine_n61": {
-        "time_taken": 2.7830295580000097,
+        "time_taken": 2.740726424002787,
         "success": true
     },
     "mengine_n66": {
-        "time_taken": 3.0380274439999653,
+        "time_taken": 3.0752917179925134,
         "success": true
     },
     "mengine_n71": {
-        "time_taken": 3.0621813589999647,
+        "time_taken": 2.9581737499975134,
         "success": true
     },
     "coqc_n2": {
@@ -141,6 +141,22 @@
     },
     "lean_n10": {
         "time_taken": 60.077544559999296,
+        "success": false
+    },
+    "lean_n11": {
+        "time_taken": 60.08410466701025,
+        "success": false
+    },
+    "lean_n12": {
+        "time_taken": 60.103544950005016,
+        "success": false
+    },
+    "lean_n13": {
+        "time_taken": 60.0883258870017,
+        "success": false
+    },
+    "lean_n14": {
+        "time_taken": 60.02529302799667,
         "success": false
     }
 }

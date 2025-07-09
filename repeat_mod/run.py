@@ -18,15 +18,18 @@ def generate_coq_file_rewrite_bng(n, filename, method):
 
     with open(filename, 'w') as f:
         f.write("Require Import Morphisms Setoid.\n")
-        f.write("Require Import Nat.\n\n")
-        f.write("Variable b p : nat.\n")
-        f.write("Variable mod_mod : forall (a : nat) (n : nat), ((a mod n) mod n) = (a mod n).\n\n")
+        f.write("Section Test.\n\n")
+        f.write("Variable nat : Set.\n")
+        f.write("Variable b : nat.\n")
+        f.write("Variable p : nat.\n")
+        f.write("Variable mod : nat -> nat -> nat.\n")
+        f.write("Variable mod_mod : forall (a : nat) (n : nat), (mod (mod a n) n) = (mod a n).\n\n")
 
         # Build the left-hand side (((b mod p) mod p) mod p) ...
         lhs = "b"
         for _ in range(n):
-            lhs = f"({lhs} mod p)"
-        rhs = "b mod p"
+            lhs = f"(mod {lhs} p)"
+        rhs = "mod b p"
 
         f.write(f"Theorem mod_mod_chain : {lhs} = {rhs}.\n")
         f.write("Proof.\n")
@@ -34,6 +37,8 @@ def generate_coq_file_rewrite_bng(n, filename, method):
         f.write(f"{method_to_text[method]} mod_mod. ")
         f.write("reflexivity.\n")
         f.write("Qed.\n")
+        f.write("End Test.\n")
+
 
 def generate_lean_file(n, filename, strategy):
     strategy_to_text = {
@@ -116,6 +121,7 @@ def main():
             end = time.perf_counter()
             os.remove(filename)
 
+            results = load_results()
             results[key] = {"time_taken": end - start, "success": success}
             save_results(results)
     elif engine == "lean":

@@ -1,6 +1,6 @@
 {
     "mengine_n1": {
-        "time_taken": 0.004060332983499393,
+        "time_taken": 0.0060269910027273,
         "success": true
     },
     "mengine_n6": {
@@ -8,7 +8,7 @@
         "success": true
     },
     "mengine_n11": {
-        "time_taken": 0.020168958988506347,
+        "time_taken": 0.044545086988364346,
         "success": true
     },
     "mengine_n16": {
@@ -16,7 +16,7 @@
         "success": true
     },
     "mengine_n21": {
-        "time_taken": 0.042385201988508925,
+        "time_taken": 0.06922289100475609,
         "success": true
     },
     "mengine_n26": {
@@ -24,7 +24,7 @@
         "success": true
     },
     "mengine_n31": {
-        "time_taken": 0.07630014399182983,
+        "time_taken": 0.10178448900114745,
         "success": true
     },
     "mengine_n36": {
@@ -32,7 +32,7 @@
         "success": true
     },
     "mengine_n41": {
-        "time_taken": 0.11975567898480222,
+        "time_taken": 0.169617351013585,
         "success": true
     },
     "mengine_n46": {
@@ -80,87 +80,87 @@
         "success": true
     },
     "mengine_n51": {
-        "time_taken": 0.20972673199139535,
+        "time_taken": 0.25251517099968623,
         "success": true
     },
     "mengine_n61": {
-        "time_taken": 0.24484255001880229,
+        "time_taken": 0.3234882300021127,
         "success": true
     },
     "mengine_n71": {
-        "time_taken": 0.370959995983867,
+        "time_taken": 0.4506641829939326,
         "success": true
     },
     "mengine_n81": {
-        "time_taken": 0.4764896660053637,
+        "time_taken": 0.6503865580016281,
         "success": true
     },
     "mengine_n91": {
-        "time_taken": 0.6467498059791978,
+        "time_taken": 0.8085064530023374,
         "success": true
     },
     "mengine_n101": {
-        "time_taken": 0.7598824180022348,
+        "time_taken": 1.0008312799909618,
         "success": true
     },
     "mengine_n111": {
-        "time_taken": 1.0508581780013628,
+        "time_taken": 1.2939301860023988,
         "success": true
     },
     "mengine_n121": {
-        "time_taken": 1.1870837740134448,
+        "time_taken": 1.5374472769908607,
         "success": true
     },
     "mengine_n131": {
-        "time_taken": 1.6129995390074328,
+        "time_taken": 1.960373042995343,
         "success": true
     },
     "mengine_n141": {
-        "time_taken": 1.8703320560161956,
+        "time_taken": 1.670696068991674,
         "success": true
     },
     "mengine_n151": {
-        "time_taken": 2.102148281002883,
+        "time_taken": 2.030990601007943,
         "success": true
     },
     "mengine_n161": {
-        "time_taken": 2.706898552016355,
+        "time_taken": 2.1807777420035563,
         "success": true
     },
     "mengine_n171": {
-        "time_taken": 3.0354281720065046,
+        "time_taken": 2.5887205350009026,
         "success": true
     },
     "mengine_n181": {
-        "time_taken": 3.4828461539873388,
+        "time_taken": 3.109424324997235,
         "success": true
     },
     "mengine_n191": {
-        "time_taken": 4.075825250009075,
+        "time_taken": 3.571504862004076,
         "success": true
     },
     "mengine_n201": {
-        "time_taken": 4.712024254986318,
+        "time_taken": 4.168666740995832,
         "success": true
     },
     "mengine_n211": {
-        "time_taken": 5.460706956015201,
+        "time_taken": 4.734972449004999,
         "success": true
     },
     "mengine_n221": {
-        "time_taken": 6.152640537999105,
+        "time_taken": 5.304489766000188,
         "success": true
     },
     "mengine_n231": {
-        "time_taken": 7.037926268996671,
+        "time_taken": 6.047645522994571,
         "success": true
     },
     "mengine_n241": {
-        "time_taken": 7.644566956005292,
+        "time_taken": 6.785360321999178,
         "success": true
     },
     "mengine_n251": {
-        "time_taken": 8.839664906001417,
+        "time_taken": 7.451095163996797,
         "success": true
     },
     "coqc_n51": {
@@ -244,7 +244,7 @@
         "success": true
     },
     "mengine_n261": {
-        "time_taken": 8.947939703000003,
+        "time_taken": 8.31838837399846,
         "success": true
     },
     "coqc_n251": {
@@ -260,55 +260,55 @@
         "success": true
     },
     "mengine_n271": {
-        "time_taken": 11.485448865999842,
+        "time_taken": 9.335698711991427,
         "success": true
     },
     "mengine_n281": {
-        "time_taken": 12.106806074999895,
+        "time_taken": 10.300049022000167,
         "success": true
     },
     "mengine_n291": {
-        "time_taken": 13.223589600000196,
+        "time_taken": 11.474272983003175,
         "success": true
     },
     "mengine_n301": {
-        "time_taken": 13.78441945800023,
+        "time_taken": 12.528221922999364,
         "success": true
     },
     "mengine_n311": {
-        "time_taken": 15.748565408000104,
+        "time_taken": 13.565564178003115,
         "success": true
     },
     "mengine_n321": {
-        "time_taken": 16.350560957999733,
+        "time_taken": 14.969730996002909,
         "success": true
     },
     "mengine_n331": {
-        "time_taken": 17.960300474999713,
+        "time_taken": 16.164018628987833,
         "success": true
     },
     "mengine_n341": {
-        "time_taken": 19.267104242000187,
+        "time_taken": 17.771328832997824,
         "success": true
     },
     "mengine_n351": {
-        "time_taken": 21.390612966999925,
+        "time_taken": 19.079283186991233,
         "success": true
     },
     "mengine_n361": {
-        "time_taken": 22.71614171600004,
+        "time_taken": 21.406615708998288,
         "success": true
     },
     "mengine_n371": {
-        "time_taken": 25.016964916000234,
+        "time_taken": 22.773729916996672,
         "success": true
     },
     "mengine_n381": {
-        "time_taken": 26.305258417000005,
+        "time_taken": 24.425849478997407,
         "success": true
     },
     "mengine_n391": {
-        "time_taken": 27.70101598300016,
+        "time_taken": 25.921026456999243,
         "success": true
     },
     "coqc_n281": {

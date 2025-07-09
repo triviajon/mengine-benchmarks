@@ -28,6 +28,7 @@ def generate_coq_file(n, m, filename, strategy):
 
     content = f"""Require Import Setoid Morphisms.
 Section Test.
+    Variable nat : Set.
     Variable x0 : nat.
     Variable f : {nat_args}.
 
@@ -123,10 +124,10 @@ def main():
                 continue
             
             key = f"{engine}_n{n}_m{m}_{strategy}"
-            results = load_results()
-            if key in results:
-                print(f"Results for {key} already exist. Skipping.")
-                continue
+            # results = load_results()
+            # if key in results:
+            #     print(f"Results for {key} already exist. Skipping.")
+            #     continue
             filename = f"test_n{n}_m{m}_{strategy}.v"
             generate_coq_file(n, m, filename, strategy)
             start = time.perf_counter()

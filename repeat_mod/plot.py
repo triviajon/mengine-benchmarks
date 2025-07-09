@@ -61,6 +61,9 @@ def plot_benchmark(results, output_dir):
 
     plt.figure(figsize=(8,6))
 
+    # Track max n for Lean strategies to add crash annotations
+    lean_max_points = {}
+
     for engine, points in data_by_engine_strat.items():
         if not points:
             continue
@@ -75,6 +78,48 @@ def plot_benchmark(results, output_dir):
             linewidth=1.5,
             zorder=2
         )
+        
+        # Store the max point for Lean strategies
+        if engine in ['simp', 'repeat']:
+            max_n = max(ns)
+            max_t = ts[ns.index(max_n)]
+            lean_max_points[engine] = (max_n, max_t)
+
+    # Add single crash annotation for Lean strategies with arrows to both crash points
+    if lean_max_points:
+        # Find the overall max point among all Lean strategies for positioning
+        all_lean_points = list(lean_max_points.values())
+        max_n_overall = max(point[0] for point in all_lean_points)
+        max_t_overall = max(point[1] for point in all_lean_points)
+        
+        # Position annotation further to the right
+        annotation_pos = (max_n_overall * 1.2, max_t_overall * 2.5)
+        
+        # Add annotation
+        plt.annotate(
+            'Lean crashed!\n(stack overflow)',
+            xy=annotation_pos,
+            xytext=annotation_pos,
+            fontsize=14,
+            color='black',
+            ha='center',
+            bbox=dict(boxstyle='round,pad=0.3', facecolor='white', edgecolor='green', alpha=0.8)
+        )
+        
+        # Add arrows from annotation to each crash point and circle the crash points
+        if lean_max_points:
+            # Find the furthest crash point (highest n value)
+            furthest_point = max(lean_max_points.values(), key=lambda point: point[0])
+            max_n, max_t = furthest_point
+            
+            # Add arrow starting from lower part of annotation to furthest point only
+            arrow_start = (annotation_pos[0], annotation_pos[1] * 0.95)
+            plt.annotate(
+                '',
+                xy=(max_n, max_t),
+                xytext=arrow_start,
+                arrowprops=dict(arrowstyle='->', color='green', lw=1)
+            )
 
     plt.xlabel("n (# Rewriting Locations)")
     plt.ylabel("Time (seconds)")

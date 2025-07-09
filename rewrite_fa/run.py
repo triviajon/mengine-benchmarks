@@ -20,7 +20,7 @@ Section Test.
     Variable app_cong : (forall (A: Type), (forall (B: Type), (forall (f: (forall (_: A), B)), (forall (g: (forall (_: A), B)), (forall (x: A), (forall (y: A), (forall (_: (((eq (forall (_: A), B)) f) g)), (forall (_: (((eq A) x) y)), (((eq B) (f x)) (g y)))))))))).
     Variable eq_trans : (forall (A: Type), (forall (x: A), (forall (y: A), (forall (z: A), (forall (_: (((eq A) x) y)), (forall (_: (((eq A) y) z)), (((eq A) x) z))))))).
     
-    Variable nat : Type.
+    Variable nat : Set.
     Variable f : (forall (_: nat), nat).
     Variable g : (forall (_: nat), nat).
     Variable a : nat.
@@ -71,7 +71,7 @@ Section Test.
     Variable app_cong : (forall (A: Type), (forall (B: Type), (forall (f: (forall (_: A), B)), (forall (g: (forall (_: A), B)), (forall (x: A), (forall (y: A), (forall (_: (((eq (forall (_: A), B)) f) g)), (forall (_: (((eq A) x) y)), (((eq B) (f x)) (g y)))))))))).
     Variable eq_trans : (forall (A: Type), (forall (x: A), (forall (y: A), (forall (z: A), (forall (_: (((eq A) x) y)), (forall (_: (((eq A) y) z)), (((eq A) x) z))))))).
     
-    Variable nat : Type.
+    Variable nat : Set.
     Variable f : (forall (_: nat), nat).
     Variable g : (forall (_: nat), nat).
     Variable a : nat.
@@ -122,7 +122,7 @@ Section Test.
     Variable app_cong : (forall (A: Type), (forall (B: Type), (forall (f: (forall (_: A), B)), (forall (g: (forall (_: A), B)), (forall (x: A), (forall (y: A), (forall (_: (((eq (forall (_: A), B)) f) g)), (forall (_: (((eq A) x) y)), (((eq B) (f x)) (g y)))))))))).
     Variable eq_trans : (forall (A: Type), (forall (x: A), (forall (y: A), (forall (z: A), (forall (_: (((eq A) x) y)), (forall (_: (((eq A) y) z)), (((eq A) x) z))))))).
     
-    Variable nat : Type.
+    Variable nat : Set.
     Variable f : (forall (_: nat), nat).
     Variable g : (forall (_: nat), nat).
     Variable a : nat.
@@ -173,7 +173,7 @@ Section Test.
     Variable app_cong : (forall (A: Type), (forall (B: Type), (forall (f: (forall (_: A), B)), (forall (g: (forall (_: A), B)), (forall (x: A), (forall (y: A), (forall (_: (((eq (forall (_: A), B)) f) g)), (forall (_: (((eq A) x) y)), (((eq B) (f x)) (g y)))))))))).
     Variable eq_trans : (forall (A: Type), (forall (x: A), (forall (y: A), (forall (z: A), (forall (_: (((eq A) x) y)), (forall (_: (((eq A) y) z)), (((eq A) x) z))))))).
     
-    Variable nat : Type.
+    Variable nat : Set.
     Variable f : (forall (_: nat), nat).
     Variable g : (forall (_: nat), nat).
     Variable a : nat.
@@ -224,7 +224,7 @@ Section Test.
     Variable app_cong : (forall (A: Type), (forall (B: Type), (forall (f: (forall (_: A), B)), (forall (g: (forall (_: A), B)), (forall (x: A), (forall (y: A), (forall (_: (((eq (forall (_: A), B)) f) g)), (forall (_: (((eq A) x) y)), (((eq B) (f x)) (g y)))))))))).
     Variable eq_trans : (forall (A: Type), (forall (x: A), (forall (y: A), (forall (z: A), (forall (_: (((eq A) x) y)), (forall (_: (((eq A) y) z)), (((eq A) x) z))))))).
     
-    Variable nat : Type.
+    Variable nat : Set.
     Variable f : (forall (_: nat), nat).
     Variable g : (forall (_: nat), nat).
     Variable a : nat.
@@ -339,9 +339,9 @@ def main():
 
             key = f"{engine}_{method}_n{n}"
             results = load_results()
-            if key in results:
-                print(f"Skipping {key}, already exists in results.")
-                continue
+            # if key in results:
+            #     print(f"Skipping {key}, already exists in results.")
+            #     continue
 
             filename = f"test_{method}_n{n}.v"
             if method == "repeatrewrite":
